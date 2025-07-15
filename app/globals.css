@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f62427;
+  --color-primary-red: #f62427;
+  --font-sans: "Inter", sans-serif;
+  
+  /* Add more custom colors if needed */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f62427;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d91f22;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f62427 #f1f1f1;
+}
+
+/* Add line-clamp utilities for Tailwind v4 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Prose styles for blog content */
+.prose {
+  max-width: none;
+  color: #374151;
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  color: #111827;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  color: #111827;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  color: #111827;
+}
+
+.prose blockquote {
+  border-left: 4px solid #f62427;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+  color: #4b5563;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose a {
+  color: #f62427;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #d91f22;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose em {
+  font-style: italic;
+}
