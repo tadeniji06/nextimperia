@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/layouts/Nav";
 import Footer from "@/layouts/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
 	title: "Imperia Consulting | Premier Real Estate in Kenya",
@@ -28,11 +29,11 @@ export const metadata: Metadata = {
 		title: "Imperia Consulting | Premier Real Estate in Kenya",
 		description:
 			"Discover premium real estate opportunities in Kenya with Imperia Consulting. We specialize in residential, commercial, and investment properties",
-		url: "https://imperiagrouponline.com", 
+		url: "https://imperiagrouponline.com",
 		siteName: "Imperia Consulting",
 		images: [
 			{
-				url: "/ilogo.svg", 
+				url: "/ilogo.svg",
 				width: 1200,
 				height: 630,
 				alt: "Imperia Consulting - Premier Real Estate in Kenya",
@@ -85,6 +86,7 @@ export default function RootLayout({
 				<Nav />
 				{children}
 				<Footer />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
