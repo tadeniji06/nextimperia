@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 		siteName: "Imperia Consulting",
 		images: [
 			{
-				url: "/ilogo.svg",
+				url: "https://imperiasseo.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.e65f9546.png&w=256&q=75",
 				width: 1200,
 				height: 630,
 				alt: "Imperia Consulting - Premier Real Estate in Kenya",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
 		title: "Imperia Consulting | Premier Real Estate in Kenya",
 		description:
 			"Discover premium real estate opportunities in Kenya with Imperia Consulting. We specialize in residential, commercial, and investment properties",
-		images: ["/ilogo.svg"], // Same image as OG
-		creator: "@imperiaconsulting", // Replace with your Twitter handle
-		site: "@imperiaconsulting", // Replace with your Twitter handle
+		images: ["/ilogo.svg"],
+		creator: "@ImperiaC_", 
+		site: "@ImperiaC_", 
 	},
 
 	// Additional metadata
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 
 	// Additional meta tags
 	other: {
-		"theme-color": "#f62427", // Your primary color
+		"theme-color": "#f62427", //primary color
 		"apple-mobile-web-app-capable": "yes",
 		"apple-mobile-web-app-status-bar-style": "default",
 	},

@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
 		ignoreBuildErrors: true,
 	},
 	images: {
-		remotePatterns: [{ hostname: "cdn.sanity.io" }],
+		remotePatterns: [
+			{ hostname: "cdn.sanity.io" },
+			{ hostname: "imperiasseo.vercel.app" },
+		],
 	},
 };
 
