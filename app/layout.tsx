@@ -3,7 +3,7 @@ import "./globals.css";
 import Nav from "@/layouts/Nav";
 import Footer from "@/layouts/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import ClarityScript from "@/components/Clarity";
 export const metadata: Metadata = {
 	title: "Imperia Consulting | Premier Real Estate in Kenya",
 	description:
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
 		description:
 			"Discover premium real estate opportunities in Kenya with Imperia Consulting. We specialize in residential, commercial, and investment properties",
 		images: ["/ilogo.svg"],
-		creator: "@ImperiaC_", 
-		site: "@ImperiaC_", 
+		creator: "@ImperiaC_",
+		site: "@ImperiaC_",
 	},
 
 	// Additional metadata
@@ -87,6 +87,7 @@ export default function RootLayout({
 				{children}
 				<Footer />
 				<SpeedInsights />
+				<ClarityScript />
 			</body>
 		</html>
 	);
