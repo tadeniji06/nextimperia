@@ -1,3 +1,4 @@
+import Apartments from "@/components/home/Apartments";
 import Featured from "@/components/home/Featured";
 import Hero from "@/components/home/Hero";
 import Stats from "@/components/home/Stats";
@@ -10,6 +11,7 @@ export default function Home() {
 			<Announcement />
 			<Hero />
 			<Featured />
+			<Apartments />
 			<WhyChooseUs />
 			<Stats />
 		</div>
