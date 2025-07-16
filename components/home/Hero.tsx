@@ -6,8 +6,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { slides } from "@/utils/data";
+import Clarity from "@microsoft/clarity";
 
 const Hero = () => {
+	const projectId = "sc89s3h9mh";
+
+	useEffect(() => {
+		Clarity.init(projectId);
+	}, []);
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
