@@ -107,7 +107,7 @@ const Apartments = () => {
 							}}
 						>
 							<Link
-								href={`/property/${apartment.id}`}
+								href={`/properties/${apartment.id}`}
 								className='block p-3 sm:p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-primary/20 group'
 							>
 								<div className='relative overflow-hidden rounded-lg mb-3 sm:mb-4'>
@@ -164,7 +164,7 @@ const Apartments = () => {
 							}}
 						>
 							<Link
-								href={`/property/${apartment.id}`}
+								href={`/properties/${apartment.id}`}
 								className='block p-3 sm:p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-primary/20 group'
 							>
 								<div className='relative overflow-hidden rounded-lg mb-3 sm:mb-4'>
