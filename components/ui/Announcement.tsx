@@ -142,11 +142,11 @@ const Announcement = () => {
 						initial='hidden'
 						animate='visible'
 						exit='exit'
-						className='bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden relative'
+						className='bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden relative'
 						onClick={(e) => e.stopPropagation()}
 					>
 						{/* Header */}
-						<div className='bg-gradient-to-r from-primary to-red-600 p-6 text-white relative'>
+						<div className='bg-gradient-to-r from-purple-600 to-indigo-700 p-6 text-white relative'>
 							<button
 								onClick={handleClose}
 								className='absolute top-4 right-4 text-white/80 hover:text-white transition-colors duration-200 p-1 rounded-full hover:bg-white/10'
@@ -164,79 +164,118 @@ const Announcement = () => {
 										className='object-contain'
 									/>
 								</div>
-								<h2 className='text-xl font-bold'>Special Offer!</h2>
+								<h2 className='text-xl font-bold'>
+									Exclusive Launch!
+								</h2>
 							</div>
 
 							<div className='flex items-center space-x-2'>
-								<Icon icon='mdi:tag' className='text-yellow-300' />
+								<Icon
+									icon='mdi:diamond-stone'
+									className='text-yellow-300'
+								/>
 								<span className='text-sm font-medium'>
-									Limited Time Only
+									Premium Property Available
+								</span>
+							</div>
+						</div>
+
+						{/* Amethyst Flyer Image */}
+						<div className='relative h-80 bg-gradient-to-br from-purple-50 to-indigo-50'>
+							<Image
+								src={amety}
+								alt='Amethyst Property'
+								fill
+								className='object-contain p-2'
+							/>
+							<div className='absolute top-4 left-4'>
+								<span className='bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+									New Launch
 								</span>
 							</div>
 						</div>
 
 						{/* Content */}
-						<div className='p-6'>
-							<h3 className='text-lg font-bold text-gray-800 mb-3'>
-								3-Bedroom Units at Oak West Residency
+						<div className='p-4'>
+							<h3 className='text-lg font-bold text-gray-800 mb-2 flex items-center space-x-2'>
+								<Icon
+									icon='mdi:diamond-stone'
+									className='text-purple-600'
+								/>
+								<span>The Amethyst</span>
 							</h3>
 
-							<div className='space-y-4 text-gray-600'>
+							<div className='space-y-3 text-gray-600'>
 								<p className='text-sm leading-relaxed'>
-									We are excited to share some fantastic news with
-									you! Our 3-bedroom units at Oak West Residency are
-									now available with special pricing.
+									Discover luxury living at The Amethyst - where
+									elegance meets modern sophistication.
 								</p>
 
-								{/* Pricing Highlight */}
-								<div className='bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-4 border-l-4 border-primary'>
+								{/* Key Features */}
+								<div className='bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg p-3 border-l-4 border-purple-600'>
 									<div className='flex items-center space-x-2 mb-2'>
-										<Icon icon='mdi:home' className='text-primary' />
-										<span className='font-semibold text-gray-800'>
-											Starting from:
+										<Icon
+											icon='mdi:star'
+											className='text-purple-600'
+										/>
+										<span className='font-semibold text-gray-800 text-sm'>
+											Premium Features:
 										</span>
 									</div>
-									<div className='text-2xl font-bold text-primary'>
-										16,900,000 KSH
-									</div>
-									<div className='text-sm text-gray-600'>
-										($132,000 USD)
-									</div>
-									<div className='mt-2 text-sm'>
-										<span className='bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium'>
-											Only 30% deposit required
-										</span>
+									<div className='grid grid-cols-2 gap-1 text-xs'>
+										<div className='flex items-center space-x-1'>
+											<Icon
+												icon='mdi:check-circle'
+												className='text-green-500 text-xs'
+											/>
+											<span>Luxury Finishes</span>
+										</div>
+										<div className='flex items-center space-x-1'>
+											<Icon
+												icon='mdi:check-circle'
+												className='text-green-500 text-xs'
+											/>
+											<span>Prime Location</span>
+										</div>
+										<div className='flex items-center space-x-1'>
+											<Icon
+												icon='mdi:check-circle'
+												className='text-green-500 text-xs'
+											/>
+											<span>Modern Amenities</span>
+										</div>
+										<div className='flex items-center space-x-1'>
+											<Icon
+												icon='mdi:check-circle'
+												className='text-green-500 text-xs'
+											/>
+											<span>Secure Environment</span>
+										</div>
 									</div>
 								</div>
 
-								<p className='text-sm'>
-									This is a limited-time opportunity to own a
-									spacious, modern 3-bedroom residence in one of the
-									most sought-after developments.
-								</p>
-
-								<div className='flex items-center space-x-2 text-sm text-amber-600 bg-amber-50 p-3 rounded-lg'>
+								<div className='flex items-center space-x-2 text-sm text-purple-700 bg-purple-50 p-2 rounded-lg'>
 									<Icon
 										icon='mdi:clock-alert'
-										className='text-amber-500'
+										className='text-purple-600'
 									/>
-									<span className='font-medium'>
-										Don't miss out - secure your unit today!
+									<span className='font-medium text-xs'>
+										Limited units available - Reserve yours today!
 									</span>
 								</div>
 							</div>
 
 							{/* Action Buttons */}
-							<div className='flex space-x-3 mt-6'>
+							<div className='flex space-x-3 mt-4'>
 								<motion.button
 									variants={buttonVariants}
 									whileHover='hover'
 									whileTap='tap'
 									onClick={handleViewProperty}
-									className='flex-1 bg-primary text-white py-3 px-4 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl'
+									className='flex-1 bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-800 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl'
 								>
-									<Icon icon='mdi:home' />
-									<span>View Property</span>
+									<Icon icon='mdi:diamond-stone' />
+									<span>View Details</span>
 								</motion.button>
 
 								<motion.button
@@ -252,12 +291,12 @@ const Announcement = () => {
 						</div>
 
 						{/* Footer */}
-						<div className='bg-gray-50 px-6 py-3 text-center border-t'>
+						<div className='bg-gray-50 px-4 py-2 text-center border-t'>
 							<p className='text-xs text-gray-500'>
-								<strong className='text-primary'>
+								<strong className='text-purple-600'>
 									Imperia Consulting
 								</strong>{" "}
-								- Your Dream Home Awaits
+								- Luxury Living Redefined
 							</p>
 						</div>
 					</motion.div>

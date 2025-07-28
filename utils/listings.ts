@@ -30,6 +30,7 @@ import {
   o1p,
   o34,
   o3p,
+  amety
 } from "../assets";
 
 export const featured = [
@@ -47,6 +48,28 @@ export const featured = [
   },
 ];
 
+export const amet = [
+  {
+    id: "amet",
+    title: "Amethy",
+    mainImg: amety,
+    // flyer: e1flyer,
+    // photos: [e11, e12, e13, e14],
+    desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
+    location: "Westland, Nairobi, kenya",
+    avgPrice: "7.8M KSH ($64,000)",
+    // highlights: [
+    //   "Flexible payment plans",
+    //   "Prime locations",
+    //   "Modern Interiors",
+    //   "Secure Environment",
+    //   "Family-friendly amenities",
+    //   "12% annual ROI",
+    //   "24/7 security",
+    //   "25 floors of modern living",
+    // ],
+  },
+];
 export const emeraldOneBed = [
   {
     id: "emerald-1-bedroom",

@@ -12,6 +12,7 @@ import {
 	oakOneBed,
 	oakTwoBed,
 	oakThreeBed,
+	amet,
 } from "@/utils/listings";
 
 const PropsNav = () => {
@@ -39,6 +40,12 @@ const PropsNav = () => {
 			description:
 				"Oak West is a short walk from JW Marriott, GTC, the Sarit Centre and Westgate Mall and MP Shah hospital. It's also 15 mins drive from the Jomo Kenyatta International Airport, Nairobi.",
 			listings: oakListings,
+			color: "amber",
+		},
+		ame: {
+			title: "Amethyst",
+			description: "",
+			listings: amet,
 			color: "amber",
 		},
 	};
@@ -74,6 +81,18 @@ const PropsNav = () => {
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
 						Oak West
+					</button>
+						<button
+						type='button'
+						onClick={() => setActiveProperty("ame")}
+						className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-md text-sm sm:text-base lg:text-lg font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+							activeProperty === "ame"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Amethyst
 					</button>
 				</div>
 			</div>
