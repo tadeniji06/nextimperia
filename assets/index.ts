@@ -13,7 +13,7 @@ import kids from "./images/kids.jpg";
 import pool from "./images/pool.jpg";
 import roof from "./images/roof.jpg";
 import eme from "./images/eme.jpg";
-import oak from './images/oak.jpg'
+import oak from "./images/oak.jpg";
 
 import e1main from "./images/emerald/onebed/e1main.jpg";
 import e1flyer from "./images/emerald/onebed/e1f.jpg";
@@ -48,6 +48,8 @@ import o32 from "./images/oak/threebed/o32.jpg";
 import o33 from "./images/oak/threebed/o33.jpg";
 import o34 from "./images/oak/threebed/o34.jpg";
 import o3p from "./images/oak/threebed/o3p.jpeg";
+
+import amety from "./images/amet.jpg";
 export {
 	logo,
 	oak,
@@ -94,4 +96,5 @@ export {
 	o33,
 	o34,
 	o3p,
+	amety,
 };

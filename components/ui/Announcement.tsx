@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { logo } from "@/assets";
+import { logo, amety } from "@/assets";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
