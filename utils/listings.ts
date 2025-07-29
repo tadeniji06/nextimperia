@@ -51,7 +51,7 @@ export const featured = [
 export const amet = [
   {
     id: "amet",
-    title: "Amethy",
+    title: "Amethyst",
     mainImg: amety,
     // flyer: e1flyer,
     // photos: [e11, e12, e13, e14],

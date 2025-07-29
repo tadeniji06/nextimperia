@@ -44,14 +44,54 @@ const PropsNav = () => {
 		},
 		ame: {
 			title: "Amethyst",
-			description: "",
+			description:
+				"Luxury living at its finest with modern amenities and prime location.",
 			listings: amet,
-			color: "amber",
+			color: "purple",
 		},
 	};
 
 	const currentProperty =
 		propertyInfo[activeProperty as keyof typeof propertyInfo];
+
+	const getPropertyDisplayName = (propertyType : any) => {
+		switch (propertyType) {
+			case "emerald":
+				return "Emerald";
+			case "oak":
+				return "Oak West";
+			case "ame":
+				return "Amethyst";
+			default:
+				return "Property";
+		}
+	};
+
+	const getPropertyColorClasses = (propertyType : any, type = "bg") => {
+		switch (propertyType) {
+			case "emerald":
+				return type === "bg" ? "bg-emerald-500" : "text-emerald-600";
+			case "oak":
+				return type === "bg" ? "bg-amber-500" : "text-amber-600";
+			case "ame":
+				return type === "bg" ? "bg-purple-500" : "text-purple-600";
+			default:
+				return type === "bg" ? "bg-gray-500" : "text-gray-600";
+		}
+	};
+
+	const getGradientClasses = (propertyType : any) => {
+		switch (propertyType) {
+			case "emerald":
+				return "from-emerald-500 to-emerald-600";
+			case "oak":
+				return "from-amber-500 to-amber-600";
+			case "ame":
+				return "from-purple-500 to-purple-600";
+			default:
+				return "from-gray-500 to-gray-600";
+		}
+	};
 
 	return (
 		<div className='z-10 relative flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 sm:px-6 md:px-12 lg:px-24 xl:px-48'>
@@ -82,7 +122,7 @@ const PropsNav = () => {
 					>
 						Oak West
 					</button>
-						<button
+					<button
 						type='button'
 						onClick={() => setActiveProperty("ame")}
 						className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-md text-sm sm:text-base lg:text-lg font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
@@ -147,21 +187,18 @@ const PropsNav = () => {
 										className='w-full h-40 sm:h-48 object-cover transition-transform duration-300 group-hover:scale-105'
 									/>
 									<div
-										className={`absolute top-2 right-2 ${
-											activeProperty === "emerald"
-												? "bg-emerald-500"
-												: "bg-amber-500"
-										} text-white px-2 py-1 rounded-full text-xs font-medium`}
+										className={`absolute top-2 right-2 ${getPropertyColorClasses(
+											activeProperty,
+											"bg"
+										)} text-white px-2 py-1 rounded-full text-xs font-medium`}
 									>
-										{activeProperty === "emerald"
-											? "Emerald"
-											: "Oak West"}
+										{getPropertyDisplayName(activeProperty)}
 									</div>
 								</div>
 
 								<h3 className='text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors'>
 									{apartment.title} (
-									{activeProperty === "emerald" ? "Emerald" : "Oak"})
+									{getPropertyDisplayName(activeProperty)})
 								</h3>
 
 								<p className='text-gray-600 mb-2 text-sm sm:text-base font-medium'>
@@ -195,11 +232,10 @@ const PropsNav = () => {
 			>
 				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
 					<div
-						className={`text-3xl font-bold ${
-							activeProperty === "emerald"
-								? "text-emerald-600"
-								: "text-amber-600"
-						} mb-2`}
+						className={`text-3xl font-bold ${getPropertyColorClasses(
+							activeProperty,
+							"text"
+						)} mb-2`}
 					>
 						{currentProperty.listings.length}
 					</div>
@@ -208,24 +244,26 @@ const PropsNav = () => {
 
 				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
 					<div
-						className={`text-3xl font-bold ${
-							activeProperty === "emerald"
-								? "text-emerald-600"
-								: "text-amber-600"
-						} mb-2`}
+						className={`text-3xl font-bold ${getPropertyColorClasses(
+							activeProperty,
+							"text"
+						)} mb-2`}
 					>
-						{activeProperty === "emerald" ? "25" : "20"}
+						{activeProperty === "emerald"
+							? "25"
+							: activeProperty === "oak"
+							? "20"
+							: "15"}
 					</div>
 					<div className='text-gray-600'>Floors</div>
 				</div>
 
 				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
 					<div
-						className={`text-3xl font-bold ${
-							activeProperty === "emerald"
-								? "text-emerald-600"
-								: "text-amber-600"
-						} mb-2`}
+						className={`text-3xl font-bold ${getPropertyColorClasses(
+							activeProperty,
+							"text"
+						)} mb-2`}
 					>
 						30
 					</div>
@@ -252,11 +290,9 @@ const PropsNav = () => {
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 						<Link href='/contact'>
 							<button
-								className={`px-8 py-4 bg-gradient-to-r ${
-									activeProperty === "emerald"
-										? "from-emerald-500 to-emerald-600"
-										: "from-amber-500 to-amber-600"
-								} text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2`}
+								className={`px-8 py-4 bg-gradient-to-r ${getGradientClasses(
+									activeProperty
+								)} text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2`}
 							>
 								<Icon icon='mdi:calendar' className='w-5 h-5' />
 								Schedule a Tour
