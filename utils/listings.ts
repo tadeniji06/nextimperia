@@ -57,7 +57,7 @@ export const amet = [
     // photos: [e11, e12, e13, e14],
     desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
     location: "Westland, Nairobi, kenya",
-    avgPrice: "7.8M KSH ($64,000)",
+    avgPrice: "In development",
     // highlights: [
     //   "Flexible payment plans",
     //   "Prime locations",
