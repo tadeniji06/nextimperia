@@ -15,6 +15,11 @@ export const metadata: Metadata = {
 		"Luxury Kenya",
 		"Real Estate Services",
 	],
+	openGraph: {
+		title: "Contact Us | Imperia Consulting",
+		description:
+			"Reach out to our team to get started with investing in the Nairobi property market.",
+	},
 };
 
 const page = () => {
