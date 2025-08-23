@@ -9,6 +9,7 @@ import {
 	oakTwoBed,
 	oakThreeBed,
 	oakOneBedPlusStudy,
+	aria,
 } from "@/utils/listings";
 
 // Type-safe helper function
@@ -44,6 +45,7 @@ export async function generateMetadata({
 		...oakTwoBed,
 		...oakThreeBed,
 		...oakOneBedPlusStudy,
+		...aria,
 	];
 
 	const property = allProperties.find((item) => item.id === id);
@@ -128,6 +130,7 @@ export async function generateStaticParams() {
 		...oakTwoBed,
 		...oakThreeBed,
 		...oakOneBedPlusStudy,
+		...aria, // ← ADDED THIS LINE
 	];
 
 	return allProperties.map((property) => ({
@@ -149,6 +152,7 @@ export default async function PropertyPage({
 		...oakTwoBed,
 		...oakThreeBed,
 		...oakOneBedPlusStudy,
+		...aria, // ← ADDED THIS LINE
 	];
 
 	const property = allProperties.find((item) => item.id === id);

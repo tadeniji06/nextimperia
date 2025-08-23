@@ -48,10 +48,23 @@ import o32 from "./images/oak/threebed/o32.jpg";
 import o33 from "./images/oak/threebed/o33.jpg";
 import o34 from "./images/oak/threebed/o34.jpg";
 import o3p from "./images/oak/threebed/o3p.jpeg";
-
 import amety from "./images/amet.jpg";
+
+import a1 from './aria/DSC00001.jpg';
+import a2 from './aria/DSC00031.jpg';
+import a3 from './aria/DSC00014.jpg';
+import a4 from './aria/DSC00031.jpg';
+import a5 from './aria/DSC00016.jpg';
+import a6 from './aria/DSC00022.jpg';
+
 export {
 	logo,
+	a1,
+	a2,
+	a3,
+	a4,
+	a5,
+	a6,
 	oak,
 	hero1,
 	hero2,

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,6 +12,7 @@ import {
 	oakTwoBed,
 	oakThreeBed,
 	amet,
+	aria,
 } from "@/utils/listings";
 
 const PropsNav = () => {
@@ -49,12 +49,19 @@ const PropsNav = () => {
 			listings: amet,
 			color: "purple",
 		},
+		aria: {
+			title: "Aria Park",
+			description:
+				"A distinguished development discreetly nestled in the leafy suburbs of Karen, Nairobi. The address where sophistication effortlessly meets with the splendor of nature.",
+			listings: aria,
+			color: "indigo",
+		},
 	};
 
 	const currentProperty =
 		propertyInfo[activeProperty as keyof typeof propertyInfo];
 
-	const getPropertyDisplayName = (propertyType : any) => {
+	const getPropertyDisplayName = (propertyType: any) => {
 		switch (propertyType) {
 			case "emerald":
 				return "Emerald";
@@ -62,12 +69,17 @@ const PropsNav = () => {
 				return "Oak West";
 			case "ame":
 				return "Amethyst";
+			case "aria":
+				return "Aria Park";
 			default:
 				return "Property";
 		}
 	};
 
-	const getPropertyColorClasses = (propertyType : any, type = "bg") => {
+	const getPropertyColorClasses = (
+		propertyType: any,
+		type = "bg"
+	) => {
 		switch (propertyType) {
 			case "emerald":
 				return type === "bg" ? "bg-emerald-500" : "text-emerald-600";
@@ -75,12 +87,14 @@ const PropsNav = () => {
 				return type === "bg" ? "bg-amber-500" : "text-amber-600";
 			case "ame":
 				return type === "bg" ? "bg-purple-500" : "text-purple-600";
+			case "aria":
+				return type === "bg" ? "bg-indigo-500" : "text-indigo-600";
 			default:
 				return type === "bg" ? "bg-gray-500" : "text-gray-600";
 		}
 	};
 
-	const getGradientClasses = (propertyType : any) => {
+	const getGradientClasses = (propertyType: any) => {
 		switch (propertyType) {
 			case "emerald":
 				return "from-emerald-500 to-emerald-600";
@@ -88,6 +102,8 @@ const PropsNav = () => {
 				return "from-amber-500 to-amber-600";
 			case "ame":
 				return "from-purple-500 to-purple-600";
+			case "aria":
+				return "from-indigo-500 to-indigo-600";
 			default:
 				return "from-gray-500 to-gray-600";
 		}
@@ -97,11 +113,11 @@ const PropsNav = () => {
 		<div className='z-10 relative flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 sm:px-6 md:px-12 lg:px-24 xl:px-48'>
 			{/* Centralized Toggle - Above Header */}
 			<div className='flex justify-center mb-6 sm:mb-8'>
-				<div className='bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-sm'>
+				<div className='bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-2xl'>
 					<button
 						type='button'
 						onClick={() => setActiveProperty("emerald")}
-						className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-md text-sm sm:text-base lg:text-lg font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
 							activeProperty === "emerald"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -113,7 +129,7 @@ const PropsNav = () => {
 					<button
 						type='button'
 						onClick={() => setActiveProperty("oak")}
-						className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-md text-sm sm:text-base lg:text-lg font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
 							activeProperty === "oak"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -125,7 +141,7 @@ const PropsNav = () => {
 					<button
 						type='button'
 						onClick={() => setActiveProperty("ame")}
-						className={`flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-md text-sm sm:text-base lg:text-lg font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
 							activeProperty === "ame"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -133,6 +149,18 @@ const PropsNav = () => {
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
 						Amethyst
+					</button>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("aria")}
+						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+							activeProperty === "aria"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Aria Park
 					</button>
 				</div>
 			</div>
@@ -253,9 +281,13 @@ const PropsNav = () => {
 							? "25"
 							: activeProperty === "oak"
 							? "20"
-							: "15"}
+							: activeProperty === "ame"
+							? "15"
+							: "1"}
 					</div>
-					<div className='text-gray-600'>Floors</div>
+					<div className='text-gray-600'>
+						{activeProperty === "aria" ? "Villa" : "Floors"}
+					</div>
 				</div>
 
 				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
@@ -265,9 +297,13 @@ const PropsNav = () => {
 							"text"
 						)} mb-2`}
 					>
-						30
+						{activeProperty === "aria" ? "5" : "30"}
 					</div>
-					<div className='text-gray-600'>Months Payment Plan</div>
+					<div className='text-gray-600'>
+						{activeProperty === "aria"
+							? "Bedrooms"
+							: "Months Payment Plan"}
+					</div>
 				</div>
 			</motion.div>
 
