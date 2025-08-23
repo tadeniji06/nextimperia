@@ -8,6 +8,10 @@ export const navLinks = [
 		link: "/about",
 	},
 	{
+		name: "Our Services",
+		link: "/services",
+	},
+	{
 		name: "Properties",
 		link: "/properties",
 	},
@@ -20,6 +24,7 @@ export const navLinks = [
 		link: "/blogs",
 	},
 ];
+
 export const WALink = {
 	link: "https://wa.me/254116071190?text=Hello%20Imperia%20Consulting,%20I%20would%20like%20to%20know%20more%20about%20your%20properties.",
 };

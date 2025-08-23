@@ -86,15 +86,12 @@ const Footer = () => {
 						</h3>
 						<div className='space-y-3 text-sm text-gray-300'>
 							<div className='flex items-center gap-2'>
-								{/* <Icon icon="mdi:email-outline" className="w-4 h-4" /> */}
 								<span>Why Choose Us?</span>
 							</div>
 							<div className='flex items-center gap-2'>
-								{/* <Icon icon="mdi:phone-outline" className="w-4 h-4" /> */}
 								<span>Emerald</span>
 							</div>
 							<div className='flex items-start gap-2'>
-								{/* <Icon icon="mdi:map-marker-outline" className="w-4 h-4 mt-0.5" /> */}
 								<span>Oak West</span>
 							</div>
 						</div>
@@ -105,7 +102,15 @@ const Footer = () => {
 				<div className='border-t border-gray-800 mt-12 pt-8'>
 					<div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
 						<div className='text-gray-400 text-sm'>
-							<p>Made with ❤️ by B360 Development Team</p>
+							<p>
+								Developed by{" "}
+								<Link
+									target='_blank'
+									href='https://olutunmise.vercel.app'
+								>
+									princeOTF
+								</Link>
+							</p>
 						</div>
 						<div className='flex gap-6 text-sm'>
 							<Link
