@@ -223,7 +223,7 @@ const BlogPostClient = ({
 							{relatedPosts.map((relatedPost) => (
 								<Link
 									key={relatedPost._id}
-									href={`/blog/${relatedPost.slug.current}`}
+									href={`/blogs/${relatedPost.slug.current}`}
 									className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group'
 								>
 									{relatedPost.mainImage && (
