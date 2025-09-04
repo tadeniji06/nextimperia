@@ -37,6 +37,10 @@ import {
 	a4,
 	a5,
 	a6,
+	nm1,
+	nm2,
+	nm3,
+	nm4,
 } from "../assets";
 
 export const featured = [
@@ -82,7 +86,7 @@ export const aria = [
 		title: "Aria Park 5 Bedroom Villa",
 		mainImg: a1,
 		flyer: a2,
-		photos: [a3, a4, a5, a6],
+		photos: [a3, a4, a5, a6, nm1, nm2, nm3, nm4],
 		desc: `Welcome to ARIA PARK.  A distinguished development discreetly nestled in the leafy 
 surburbs of Karen, Nairobi.  The address where  sophistication effortlessly meets with the 
 splendor of nature.`,

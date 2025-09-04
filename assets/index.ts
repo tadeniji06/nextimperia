@@ -50,12 +50,16 @@ import o34 from "./images/oak/threebed/o34.jpg";
 import o3p from "./images/oak/threebed/o3p.jpeg";
 import amety from "./images/amet.jpg";
 
-import a1 from './aria/DSC00001.jpg';
-import a2 from './aria/DSC00031.jpg';
-import a3 from './aria/DSC00014.jpg';
-import a4 from './aria/DSC00031.jpg';
-import a5 from './aria/DSC00016.jpg';
-import a6 from './aria/DSC00022.jpg';
+import a1 from "./aria/DSC00001.jpg";
+import a2 from "./aria/DSC00031.jpg";
+import a3 from "./aria/DSC00014.jpg";
+import a4 from "./aria/DSC00031.jpg";
+import a5 from "./aria/DSC00016.jpg";
+import a6 from "./aria/DSC00022.jpg";
+import nm1 from "./aria/nm1.jpg";
+import nm2 from "./aria/nm2.jpg";
+import nm3 from "./aria/nm3.jpg";
+import nm4 from "./aria/nm4.jpg";
 
 export {
 	logo,
@@ -65,6 +69,10 @@ export {
 	a4,
 	a5,
 	a6,
+	nm1,
+	nm2,
+	nm3,
+	nm4,
 	oak,
 	hero1,
 	hero2,
