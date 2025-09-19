@@ -106,9 +106,9 @@ const Footer = () => {
 								Developed by{" "}
 								<Link
 									target='_blank'
-									href='https://olutunmise.vercel.app'
+									href='https://tech360online.com'
 								>
-									princeOTF
+									Btech360
 								</Link>
 							</p>
 						</div>
