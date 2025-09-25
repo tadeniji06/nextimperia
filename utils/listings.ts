@@ -41,6 +41,14 @@ import {
 	nm2,
 	nm3,
 	nm4,
+	am1,
+	am2,
+	am3,
+	am4,
+	am5,
+	am6,
+	am7,
+	am8,
 } from "../assets";
 
 export const featured = [
@@ -56,28 +64,34 @@ export const featured = [
 		desc: "Flexible payment plan until completion November, 2027",
 		location: "Westland, Nairobi",
 	},
+	{
+		img: am1,
+		title: "Amethyst",
+		desc: "A perfect blend of urban sophistication and comfort",
+		location: "Denis Pritt",
+	},
 ];
 
 export const amet = [
 	{
-		id: "amet",
+		id: "amethyst-props",
 		title: "Amethyst",
-		mainImg: amety,
-		// flyer: e1flyer,
-		// photos: [e11, e12, e13, e14],
+		mainImg: am1,
+		flyer: am2,
+		photos: [am3, am4, am5, am6, am7, am8],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
-		location: "Westland, Nairobi, kenya",
-		avgPrice: "In development",
-		// highlights: [
-		//   "Flexible payment plans",
-		//   "Prime locations",
-		//   "Modern Interiors",
-		//   "Secure Environment",
-		//   "Family-friendly amenities",
-		//   "12% annual ROI",
-		//   "24/7 security",
-		//   "25 floors of modern living",
-		// ],
+		location: "Denis Pritt",
+		avgPrice: "6.2M KSH",
+		highlights: [
+			"Flexible payment plans",
+			"Affordable Entry Point",
+			"Prime locations",
+			"Modern Interiors",
+			"Secure Environment",
+			"Preinstalled appliances",
+			"Family-friendly amenities",
+			"24/7 security",
+		],
 	},
 ];
 export const aria = [

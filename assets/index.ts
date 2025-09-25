@@ -49,6 +49,14 @@ import o33 from "./images/oak/threebed/o33.jpg";
 import o34 from "./images/oak/threebed/o34.jpg";
 import o3p from "./images/oak/threebed/o3p.jpeg";
 import amety from "./images/amet.jpg";
+import am1 from "./amethyst.jpg";
+import am2 from "./amv.jpg";
+import am3 from "./amvv.jpg";
+import am4 from "./amvvc.jpg";
+import am5 from "./cfmv.jpg";
+import am6 from "./cfmv.jpg";
+import am7 from "./cmav.jpg";
+import am8 from "./iomv.jpg";
 
 import a1 from "./aria/DSC00001.jpg";
 import a2 from "./aria/DSC00031.jpg";
@@ -63,6 +71,14 @@ import nm4 from "./aria/nm4.jpg";
 
 export {
 	logo,
+	am1,
+	am2,
+	am3,
+	am4,
+	am5,
+	am6,
+	am7,
+	am8,
 	a1,
 	a2,
 	a3,

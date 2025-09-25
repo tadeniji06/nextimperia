@@ -14,6 +14,7 @@ import {
 	oakThreeBed,
 	oakOneBedPlusStudy,
 	aria,
+	amet,
 } from "@/utils/listings";
 import { WALink } from "@/utils/data";
 
@@ -39,6 +40,7 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 			...oakThreeBed,
 			...oakOneBedPlusStudy,
 			...aria,
+			...amet,
 		];
 
 		const found = allProperties.find((item) => item.id === id);

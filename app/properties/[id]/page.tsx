@@ -10,6 +10,7 @@ import {
 	oakThreeBed,
 	oakOneBedPlusStudy,
 	aria,
+	amet,
 } from "@/utils/listings";
 
 // Type-safe helper function
@@ -46,6 +47,7 @@ export async function generateMetadata({
 		...oakThreeBed,
 		...oakOneBedPlusStudy,
 		...aria,
+		...amet,
 	];
 
 	const property = allProperties.find((item) => item.id === id);
@@ -57,7 +59,7 @@ export async function generateMetadata({
 		};
 	}
 
-	const pageUrl = `https://imperiagrouponline.com/property/${id}`;
+	const pageUrl = `https://imperiagrouponline.com/properties/${id}`;
 	const imageUrl = getImageUrl(property.mainImg);
 
 	return {
@@ -130,7 +132,8 @@ export async function generateStaticParams() {
 		...oakTwoBed,
 		...oakThreeBed,
 		...oakOneBedPlusStudy,
-		...aria, // ← ADDED THIS LINE
+		...aria, 
+		...amet,
 	];
 
 	return allProperties.map((property) => ({
@@ -152,7 +155,8 @@ export default async function PropertyPage({
 		...oakTwoBed,
 		...oakThreeBed,
 		...oakOneBedPlusStudy,
-		...aria, // ← ADDED THIS LINE
+		...aria, 
+		...amet,
 	];
 
 	const property = allProperties.find((item) => item.id === id);
@@ -166,7 +170,7 @@ export default async function PropertyPage({
 		"@type": "RealEstateListing",
 		name: property.title,
 		description: property.desc,
-		url: `https://imperiagrouponline.com/property/${id}`,
+		url: `https://imperiagrouponline.com/properties/${id}`,
 		image: getImageUrl(property.mainImg),
 		offers: {
 			"@type": "Offer",
