@@ -81,7 +81,7 @@ export const amet = [
 		photos: [am3, am4, am5, am6, am7, am8],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
 		location: "Denis Pritt",
-		avgPrice: "6.2M KSH",
+		avgPrice: "7M KSH ($54,000)",
 		highlights: [
 			"Flexible payment plans",
 			"Affordable Entry Point",
