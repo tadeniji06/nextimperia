@@ -53,10 +53,10 @@ import {
 
 export const featured = [
 	{
-		img: eme,
-		title: "EMERALD SPRINGS",
-		desc: "Flexible payment plan until completion October, 2026",
-		location: "Westland, Nairobi",
+		img: am1,
+		title: "Amethyst",
+		desc: "A perfect blend of urban sophistication and comfort",
+		location: "Denis Pritt",
 	},
 	{
 		img: oak,
@@ -65,10 +65,10 @@ export const featured = [
 		location: "Westland, Nairobi",
 	},
 	{
-		img: am1,
-		title: "Amethyst",
-		desc: "A perfect blend of urban sophistication and comfort",
-		location: "Denis Pritt",
+		img: eme,
+		title: "EMERALD SPRINGS",
+		desc: "Flexible payment plan until completion October, 2026",
+		location: "Westland, Nairobi",
 	},
 ];
 
