@@ -75,22 +75,59 @@ export const featured = [
 export const amet = [
 	{
 		id: "amethyst-props",
-		title: "Amethyst",
+		title: "Amethyst Springs  –Denis Pritt near the State House ",
 		mainImg: am1,
 		flyer: am2,
 		photos: [am3, am4, am5, am6, am7, am8],
-		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
+		desc: `A landmark luxury development featuring 2 striking architectural blocks connected at the rooftop. Rising 22 floors high, with 3 elevators per floor, Amethyst offers 380 exclusive apartments designed for modern urban living by the GY Group. 
+Nairobi’s best is within reach — a short drive connects you to Yaya Centre, State House and the vibrant Kilimani lifestyle, while Westlands, Upper Hill , CBD and JKIA Airport are just minutes away,Amethyst keeps you at the center of it all.
+`,
+
 		location: "Denis Pritt",
-		avgPrice: "7M KSH ($54,000)",
+		avgPrice: "7M KSH ($55,000)",
+		ApartmentOptions: [
+			{
+				size: "58m²",
+				type: "Standard 1 Bedroom Apartment(76 Units)",
+				desc: "Affordable entry point, strong rental demand",
+			},
+			{
+				size: "62m²",
+				type: "Premium 1 Bedroom (52 units)",
+				desc: "Floor-to-ceiling curved glass, Spacious interiors, premium home appliances",
+			},
+			{
+				size: "88m²",
+				type: "Standard 2 Bedroom (114 units)",
+				desc: "Balanced layout, double balconies , affordable entry point",
+			},
+			{
+				size: "90m²",
+				type: " Floating 2 Bedroom (24 units)",
+				desc: "Suspended block design, unique architecture, high-end appliances ",
+			},
+			{
+				size: "95m²",
+				type: "Premium 2 Bedroom (76 units)",
+				desc: "Elegant curved glass, breathtaking views,high-end appliances ",
+			},
+			{
+				size: "110m²",
+				type: "2 Bedroom + Study office(38 units)",
+				desc: "Spacious design ,high-end appliances Ideal for long-term living, families",
+			},
+		],
 		highlights: [
-			"Flexible payment plans",
-			"Affordable Entry Point",
-			"Prime locations",
-			"Modern Interiors",
-			"Secure Environment",
-			"Preinstalled appliances",
-			"Family-friendly amenities",
-			"24/7 security",
+			"310 Parking Spaces",
+			"Rooftop Infinity Pool with panoramic city views",
+			"Luxurious Rooftop Bar & Residents’ Lounge",
+			"Rooftop Garden & Paddle Court",
+			"Fully Equipped Gym, Spa & Sauna",
+			"Wellness Center with Yoga Studios",
+			"High-Speed Elevators (3 per floor)",
+			"High-Speed Elevators (3 per floor)",
+			"24/7 Security with CCTV Surveillance",
+			"Two Standby Generators",
 		],
 	},
 ];
