@@ -62,13 +62,13 @@ export const featured = [
 		img: oak,
 		title: "OAK WEST",
 		desc: "Flexible payment plan until completion November, 2027",
-		location: "Westland, Nairobi",
+		location: "Westlands, Nairobi",
 	},
 	{
 		img: eme,
 		title: "EMERALD SPRINGS",
 		desc: "Flexible payment plan until completion October, 2026",
-		location: "Westland, Nairobi",
+		location: "Westlands, Nairobi",
 	},
 ];
 
@@ -162,7 +162,7 @@ export const emeraldOneBed = [
 		flyer: e1flyer,
 		photos: [e11, e12, e13, e14],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
-		location: "Westland, Nairobi, kenya",
+		location: "Westlands, Nairobi, kenya",
 		avgPrice: "7.8M KSH ($64,000)",
 		highlights: [
 			"Flexible payment plans",
@@ -185,7 +185,7 @@ export const emeraldTwoBed = [
 		flyer: e2flyer,
 		photos: [e21, e22, e23, e24],
 		desc: "Spacious and elegantly designed, this two-bedroom apartment offers the perfect balance of privacy and shared living, ideal for small families, young professionals, or savvy investors.",
-		location: "Westland, Nairobi, kenya",
+		location: "Westlands, Nairobi, kenya",
 		avgPrice: "12.9M KSH ($100,000)",
 		highlights: [
 			"Flexible payment plans",
@@ -207,7 +207,7 @@ export const oakOneBed = [
 		mainImg: o1main,
 		photos: [o11, o12, o13, o14],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
-		location: "Westland, Nairobi, kenya",
+		location: "Westlands, Nairobi, kenya",
 		avgPrice: "1 bedroom (58 SQM) - 8.1M KSH($61,000)",
 		highlights: [
 			"Flexible payment plans",
@@ -240,7 +240,7 @@ export const oakOneBedPlusStudy = [
 		mainImg: o1main,
 		photos: [o1p, o12, o13, o14],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
-		location: "Westland, Nairobi, kenya",
+		location: "Westlands, Nairobi, kenya",
 		avgPrice: "1 bedroom (58 SQM) - 8.8M KSH($68,000)",
 		highlights: [
 			"Flexible payment plans",
@@ -276,7 +276,7 @@ export const oakTwoBed = [
 		mainImg: o2main,
 		photos: [o21, o22, o23, o24],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
-		location: "Westland, Nairobi, kenya",
+		location: "Westlands, Nairobi, kenya",
 		avgPrice: "2 bedroom (105 SQM) - KSH 14.1M ($110,000)",
 		highlights: [
 			"Flexible payment plans",
@@ -309,7 +309,7 @@ export const oakThreeBed = [
 		mainImg: o3main,
 		photos: [o31, o3p, o32, o34, o33],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
-		location: "Westland, Nairobi, kenya",
+		location: "Westlands, Nairobi, kenya",
 		avgPrice: "3 bedroom(150 SQM) 16.9M KSH ($132,000)",
 		highlights: [
 			"Flexible payment plans",
