@@ -49,6 +49,16 @@ import {
 	am6,
 	am7,
 	am8,
+	bf1,
+	bf2,
+	bf3,
+	bf4,
+	bf5,
+	b1,
+	b2,
+	b3,
+	b4,
+	b5,
 } from "../assets";
 
 export const featured = [
@@ -257,12 +267,12 @@ export const oakOneBedPlusStudy = [
 				title: "1 BEDROOM APARTMENT PLUS STUDY",
 				price: "8.8M KSH",
 				installmentPlan: [
-					"30℅- 2,640,000 (deposit) ",
-					"12.5℅- 1,100,000 ( after every 6 months) instalment",
-					"12.5℅ -1,100,000",
-					"12.5℅ -1,100,000",
-					"12.5℅- 1,100,000",
-					"20℅- 1,760,00 (upon completion November 2027)",
+					"30% - 2,640,000 (deposit) ",
+					"12.5% - 1,100,000 ( after every 6 months) instalment",
+					"12.5% - 1,100,000",
+					"12.5% - 1,100,000",
+					"12.5% - 1,100,000",
+					"20% - 1,760,000 (upon completion November 2027)",
 				],
 			},
 		],
@@ -329,6 +339,174 @@ export const oakThreeBed = [
 					"50℅ - spread equally at 2,112,500 KH every 6 months (4 installments)",
 					"20% - 3,380,000 KSH (upon completion in November 2027)",
 				],
+			},
+		],
+	},
+];
+
+export const brooksideForestOne = [
+	{
+		id: "brookside-forest-1-project",
+		title: "Brookside Forest One Residency",
+		mainImg: bf1,
+		photos: [bf1, bf2, bf3, bf4, bf5],
+		desc: `Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction. Our approach merges modern aesthetics with practical elegance, ensuring our residence offers a harmonious blend of style and comfort. With its prime location, high rental demand, and contemporary amenities, this apartment is an ideal choice for savvy investors looking to expand their portfolio.`,
+		location: "Westlands, Nairobi, Kenya",
+		avgPrice: "From 9.1M KSH",
+		highlights: [
+			"Fully equipped gymnasium",
+			"Heated swimming pool",
+			"Children's play area",
+			"Secure Environment",
+			"24/7 security",
+		],
+		ApartmentOptions: [
+			// Type A
+			{
+				type: "Type A - 3 Bedroom All En-suite with SQ",
+				floor: "1st-7th Floor",
+				size: "179m²",
+				price: "20,585,000 KSH",
+				desc: "Spacious 3 bed with SQ (Lower Floors)",
+			},
+			{
+				type: "Type A - 3 Bedroom All En-suite with SQ",
+				floor: "8th-20th Floor",
+				size: "179m²",
+				price: "21,480,000 KSH",
+				desc: "Spacious 3 bed with SQ (Upper Floors)",
+			},
+			// Type B
+			{
+				type: "Type B - 1 Bedroom",
+				floor: "1st-7th Floor",
+				size: "79m²",
+				price: "9,875,000 KSH",
+				desc: "Compact 1 Bed (Lower Floors)",
+			},
+			{
+				type: "Type B - 1 Bedroom",
+				floor: "8th-20th Floor",
+				size: "79m²",
+				price: "9,875,000 KSH",
+				desc: "Compact 1 Bed (Upper Floors)",
+			},
+			// Type C
+			{
+				type: "Type C - 1 Bedroom",
+				floor: "1st-7th Floor",
+				size: "81m²",
+				price: "9,720,000 KSH",
+				desc: "Standard 1 Bed (Lower Floors)",
+			},
+			{
+				type: "Type C - 1 Bedroom",
+				floor: "8th-20th Floor",
+				size: "81m²",
+				price: "10,125,000 KSH",
+				desc: "Standard 1 Bed (Upper Floors)",
+			},
+			// Type D
+			{
+				type: "Type D - 1 Bedroom",
+				floor: "1st-7th Floor",
+				size: "76m²",
+				price: "9,120,000 KSH",
+				desc: "Value 1 Bed (Lower Floors)",
+			},
+			{
+				type: "Type D - 1 Bedroom",
+				floor: "8th-20th Floor",
+				size: "76m²",
+				price: "9,500,000 KSH",
+				desc: "Value 1 Bed (Upper Floors)",
+			},
+			// Type E
+			{
+				type: "Type E - 2 Bedroom All En-suite",
+				floor: "1st-7th Floor",
+				size: "120m²",
+				price: "14,400,000 KSH",
+				desc: "Luxury 2 Bed (Lower Floors)",
+			},
+			{
+				type: "Type E - 2 Bedroom All En-suite",
+				floor: "8th-20th Floor",
+				size: "120m²",
+				price: "15,000,000 KSH",
+				desc: "Luxury 2 Bed (Upper Floors)",
+			},
+		],
+	},
+];
+
+export const brooksideOne = [
+	{
+		id: "brookside-one-project",
+		title: "Brookside One Residency",
+		mainImg: b1,
+		photos: [b1, b2, b3, b4, b5],
+		desc: `Brookside One, one more upcoming masterpiece project in Nairobi real estate development industry after Riverside One and Rhapta One. Offering premium living spaces with top-tier amenities.`,
+		location: "Westlands, Nairobi, Kenya",
+		avgPrice: "From 14.5M KSH",
+		highlights: [
+			"Entrance hall with reception",
+			"Club House",
+			"Automatic generator",
+			"Fully equipped gym",
+			"24/7 security",
+			"Borehole and underground water storage",
+		],
+		ApartmentOptions: [
+			// Block A
+			{
+				type: "Block A - A-101 (4 BED+DSQ)",
+				size: "299m²",
+				price: "34.5 Million KSH",
+				desc: "Premium 4 Bedroom with DSQ",
+			},
+			{
+				type: "Block A - A-102 (3 BED+DSQ)",
+				size: "222m²",
+				price: "25.5 Million KSH",
+				desc: "Spacious 3 Bedroom with DSQ",
+			},
+			{
+				type: "Block A - A-103 (3 BED+DSQ)",
+				size: "172m²",
+				price: "19.8 Million KSH",
+				desc: "Modern 3 Bedroom with DSQ",
+			},
+			{
+				type: "Block A - A-104 (2 BED)",
+				size: "126m²",
+				price: "14.5 Million KSH",
+				desc: "Cosy 2 Bedroom",
+			},
+			// Block B
+			{
+				type: "Block B - B-101 (4 BED+DSQ)",
+				size: "279m²",
+				price: "32 Million KSH",
+				desc: "Premium 4 Bedroom with DSQ",
+			},
+			{
+				type: "Block B - B-102 (3 BED+DSQ)",
+				size: "222m²",
+				price: "25.5 Million KSH",
+				desc: "Spacious 3 Bedroom with DSQ",
+			},
+			{
+				type: "Block B - B-103 (3 BED+DSQ)",
+				size: "172m²",
+				price: "19.8 Million KSH",
+				desc: "Modern 3 Bedroom with DSQ",
+			},
+			{
+				type: "Block B - B-104 (2 BED)",
+				size: "129m²",
+				price: "14.8 Million KSH",
+				desc: "Cosy 2 Bedroom",
 			},
 		],
 	},

@@ -69,8 +69,30 @@ import nm2 from "./aria/nm2.jpg";
 import nm3 from "./aria/nm3.jpg";
 import nm4 from "./aria/nm4.jpg";
 
+import bf1 from "./bf1.jpeg";
+import bf2 from "./bf2.jpeg";
+import bf3 from "./bf3.jpeg";
+import bf4 from "./bf4.jpeg";
+import bf5 from "./bf5.jpeg";
+
+import b1 from "./b1.jpeg";
+import b2 from "./b2.jpeg";
+import b3 from "./b3.jpeg";
+import b4 from "./b4.jpeg";
+import b5 from "./b5.jpeg";
+
 export {
 	logo,
+	b1,
+	b2,
+	b3,
+	b4,
+	b5,
+	bf1,
+	bf2,
+	bf3,
+	bf4,
+	bf5,
 	am1,
 	am2,
 	am3,

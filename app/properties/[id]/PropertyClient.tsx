@@ -14,6 +14,8 @@ import {
 	oakOneBedPlusStudy,
 	aria,
 	amet,
+	brooksideForestOne,
+	brooksideOne,
 } from "@/utils/listings";
 import { WALink } from "@/utils/data";
 
@@ -40,6 +42,8 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 			...oakOneBedPlusStudy,
 			...aria,
 			...amet,
+			...brooksideForestOne,
+			...brooksideOne,
 		];
 
 		const found = allProperties.find((item) => item.id === id);
@@ -47,7 +51,7 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 			setProperty(found);
 			if (found.photos && Array.isArray(found.photos)) {
 				const valid = found.photos.filter(
-					(img: any) => img && typeof img === "object" && img.src
+					(img: any) => img && typeof img === "object" && img.src,
 				);
 				setGalleryImages(valid);
 			}
@@ -200,15 +204,39 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 												<h3 className='text-lg font-bold mb-2 text-primary'>
 													{opt.type}
 												</h3>
-												<p className='text-sm text-gray-600 mb-2'>
-													<span className='font-semibold text-gray-800'>
-														Size:
-													</span>{" "}
-													{opt.size}
-												</p>
-												<p className='text-gray-700'>{opt.desc}</p>
+												<div className='space-y-1 mb-3'>
+													<p className='text-sm text-gray-600'>
+														<span className='font-semibold text-gray-800'>
+															Size:
+														</span>{" "}
+														{opt.size}
+													</p>
+													{opt.floor && (
+														<p className='text-sm text-gray-600'>
+															<span className='font-semibold text-gray-800'>
+																Floor:
+															</span>{" "}
+															{opt.floor}
+														</p>
+													)}
+													{opt.price && (
+														<p className='text-sm text-gray-600'>
+															<span className='font-semibold text-gray-800'>
+																Price:
+															</span>{" "}
+															<span className='text-green-600 font-medium'>
+																{opt.price}
+															</span>
+														</p>
+													)}
+												</div>
+												{opt.desc && (
+													<p className='text-gray-700 text-sm'>
+														{opt.desc}
+													</p>
+												)}
 											</motion.div>
-										)
+										),
 									)}
 								</div>
 							</motion.div>
@@ -234,7 +262,7 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 											/>
 											<span className='text-gray-700'>{item}</span>
 										</li>
-									)
+									),
 								)}
 							</ul>
 						</div>

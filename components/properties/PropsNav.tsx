@@ -13,6 +13,8 @@ import {
 	oakThreeBed,
 	amet,
 	aria,
+	brooksideForestOne,
+	brooksideOne,
 } from "@/utils/listings";
 
 const PropsNav = () => {
@@ -56,6 +58,20 @@ const PropsNav = () => {
 			listings: aria,
 			color: "indigo",
 		},
+		bf1: {
+			title: "Brookside Forest One",
+			description:
+				"Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction.",
+			listings: brooksideForestOne,
+			color: "teal",
+		},
+		b1: {
+			title: "Brookside One",
+			description:
+				"Brookside One offers premium living spaces with top-tier amenities in Westlands.",
+			listings: brooksideOne,
+			color: "cyan",
+		},
 	};
 
 	const currentProperty =
@@ -71,6 +87,10 @@ const PropsNav = () => {
 				return "Amethyst";
 			case "aria":
 				return "Aria Park";
+			case "bf1":
+				return "Forest One";
+			case "b1":
+				return "Brookside One";
 			default:
 				return "Property";
 		}
@@ -78,7 +98,7 @@ const PropsNav = () => {
 
 	const getPropertyColorClasses = (
 		propertyType: any,
-		type = "bg"
+		type = "bg",
 	) => {
 		switch (propertyType) {
 			case "emerald":
@@ -89,6 +109,10 @@ const PropsNav = () => {
 				return type === "bg" ? "bg-purple-500" : "text-purple-600";
 			case "aria":
 				return type === "bg" ? "bg-indigo-500" : "text-indigo-600";
+			case "bf1":
+				return type === "bg" ? "bg-teal-500" : "text-teal-600";
+			case "b1":
+				return type === "bg" ? "bg-cyan-500" : "text-cyan-600";
 			default:
 				return type === "bg" ? "bg-gray-500" : "text-gray-600";
 		}
@@ -104,6 +128,10 @@ const PropsNav = () => {
 				return "from-purple-500 to-purple-600";
 			case "aria":
 				return "from-indigo-500 to-indigo-600";
+			case "bf1":
+				return "from-teal-500 to-teal-600";
+			case "b1":
+				return "from-cyan-500 to-cyan-600";
 			default:
 				return "from-gray-500 to-gray-600";
 		}
@@ -113,11 +141,11 @@ const PropsNav = () => {
 		<div className='z-10 relative flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 sm:px-6 md:px-12 lg:px-24 xl:px-48'>
 			{/* Centralized Toggle - Above Header */}
 			<div className='flex justify-center mb-6 sm:mb-8'>
-				<div className='bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-2xl'>
+				<div className='bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-5xl overflow-x-auto'>
 					<button
 						type='button'
 						onClick={() => setActiveProperty("emerald")}
-						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
 							activeProperty === "emerald"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -129,7 +157,7 @@ const PropsNav = () => {
 					<button
 						type='button'
 						onClick={() => setActiveProperty("oak")}
-						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
 							activeProperty === "oak"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -141,7 +169,7 @@ const PropsNav = () => {
 					<button
 						type='button'
 						onClick={() => setActiveProperty("ame")}
-						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
 							activeProperty === "ame"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -153,7 +181,7 @@ const PropsNav = () => {
 					<button
 						type='button'
 						onClick={() => setActiveProperty("aria")}
-						className={`flex-1 px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation ${
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
 							activeProperty === "aria"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
@@ -161,6 +189,30 @@ const PropsNav = () => {
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
 						Aria Park
+					</button>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("bf1")}
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
+							activeProperty === "bf1"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Forest One
+					</button>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("b1")}
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
+							activeProperty === "b1"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Brookside One
 					</button>
 				</div>
 			</div>
@@ -217,7 +269,7 @@ const PropsNav = () => {
 									<div
 										className={`absolute top-2 right-2 ${getPropertyColorClasses(
 											activeProperty,
-											"bg"
+											"bg",
 										)} text-white px-2 py-1 rounded-full text-xs font-medium`}
 									>
 										{getPropertyDisplayName(activeProperty)}
@@ -251,62 +303,6 @@ const PropsNav = () => {
 				</motion.div>
 			</AnimatePresence>
 
-			{/* Stats Section */}
-			{/* <motion.div
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5, delay: 0.3 }}
-				className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'
-			>
-				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
-					<div
-						className={`text-3xl font-bold ${getPropertyColorClasses(
-							activeProperty,
-							"text"
-						)} mb-2`}
-					>
-						{currentProperty.listings.length}
-					</div>
-					<div className='text-gray-600'>Available Units</div>
-				</div>
-
-				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
-					<div
-						className={`text-3xl font-bold ${getPropertyColorClasses(
-							activeProperty,
-							"text"
-						)} mb-2`}
-					>
-						{activeProperty === "emerald"
-							? "25"
-							: activeProperty === "oak"
-							? "20"
-							: activeProperty === "ame"
-							? "15"
-							: "1"}
-					</div>
-					<div className='text-gray-600'>
-						{activeProperty === "aria" ? "Villa" : "Floors"}
-					</div>
-				</div>
-
-				<div className='text-center p-6 bg-white rounded-lg border border-gray-200'>
-					<div
-						className={`text-3xl font-bold ${getPropertyColorClasses(
-							activeProperty,
-							"text"
-						)} mb-2`}
-					>
-						{activeProperty === "aria" ? "5" : "30"}
-					</div>
-					<div className='text-gray-600'>
-						{activeProperty === "aria"
-							? "Bedrooms"
-							: "Months Payment Plan"}
-					</div>
-				</div>
-			</motion.div> */}
-
 			{/* Call to Action */}
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
@@ -327,7 +323,7 @@ const PropsNav = () => {
 						<Link href='/contact'>
 							<button
 								className={`px-8 py-4 bg-gradient-to-r ${getGradientClasses(
-									activeProperty
+									activeProperty,
 								)} text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2`}
 							>
 								<Icon icon='mdi:calendar' className='w-5 h-5' />
