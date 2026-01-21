@@ -346,8 +346,8 @@ export const oakThreeBed = [
 
 export const brooksideForestOne = [
 	{
-		id: "brookside-forest-1-project",
-		title: "Brookside Forest One Residency",
+		id: "forest-one-residency",
+		title: "Forest One Residency",
 		mainImg: bf1,
 		photos: [bf1, bf2, bf3, bf4, bf5],
 		desc: `Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction. Our approach merges modern aesthetics with practical elegance, ensuring our residence offers a harmonious blend of style and comfort. With its prime location, high rental demand, and contemporary amenities, this apartment is an ideal choice for savvy investors looking to expand their portfolio.`,
