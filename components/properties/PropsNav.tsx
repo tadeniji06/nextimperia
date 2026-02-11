@@ -59,7 +59,7 @@ const PropsNav = () => {
 			color: "indigo",
 		},
 		bf1: {
-			title: "Brookside Forest One",
+			title: "Forest One",
 			description:
 				"Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction.",
 			listings: brooksideForestOne,
