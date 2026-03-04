@@ -4,6 +4,7 @@ import Nav from "@/layouts/Nav";
 import Footer from "@/layouts/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ClarityScript from "@/components/Clarity";
+import AnalyticsScript from "@/components/Analytics";
 export const metadata: Metadata = {
 	title: "Imperia Consulting | Premier Real Estate in Kenya",
 	description:
@@ -88,6 +89,7 @@ export default function RootLayout({
 				<Footer />
 				<SpeedInsights />
 				<ClarityScript />
+				<AnalyticsScript />
 			</body>
 		</html>
 	);
