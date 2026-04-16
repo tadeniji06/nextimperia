@@ -16,6 +16,10 @@ export const navLinks = [
 		link: "/properties",
 	},
 	{
+		name: "The Launch",
+		link: "/the-launch",
+	},
+	{
 		name: "Contact Us",
 		link: "/contact",
 	},

@@ -15,6 +15,18 @@ import roof from "./images/roof.jpg";
 import eme from "./images/eme.jpg";
 import oak from "./images/oak.jpg";
 
+import t1 from './launch/tl1.jpg';
+import t2 from './launch/tl2.jpg';
+import t3 from './launch/tl3.jpg';
+import t4 from './launch/tl4.jpg';
+import t5 from './launch/tl5.jpg';
+import t6 from './launch/tl6.jpg';
+import t7 from './launch/tl7.jpg';
+import t8 from './launch/tl8.jpg';
+import t9 from './launch/tl9.jpg';
+import t10 from './launch/tl10.jpg';
+import t11 from './launch/tl11.jpg';
+
 import e1main from "./images/emerald/onebed/e1main.jpg";
 import e1flyer from "./images/emerald/onebed/e1f.jpg";
 import e11 from "./images/emerald/onebed/e11.jpg";
@@ -83,6 +95,17 @@ import b5 from "./b5.jpeg";
 
 export {
 	logo,
+	t1,
+	t2,
+	t3,
+	t4,
+	t5,
+	t6,
+	t7,
+	t8,
+	t9,
+	t10,
+	t11,
 	b1,
 	b2,
 	b3,
