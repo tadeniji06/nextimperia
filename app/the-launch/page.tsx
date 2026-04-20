@@ -7,10 +7,10 @@ import { t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11 } from "@/assets";
 
 const images = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11];
 const videos = [
-	{ id: 1, src: "/vid1.mp4", title: "Official Launch Video" },
-	{ id: 2, src: "/vid2.mp4", title: "The Experience" },
-	{ id: 3, src: "/vid3.mp4", title: "Behind the Scenes" },
-	{ id: 4, src: "/vid4.mp4", title: "Event Highlights" },
+	{ id: 1, src: "/main1.mp4", title: "Official Launch Video" },
+	// { id: 2, src: "/vid2.mp4", title: "The Experience" },
+	// { id: 3, src: "/vid3.mp4", title: "Behind the Scenes" },
+	// { id: 4, src: "/vid4.mp4", title: "Event Highlights" },
 ];
 
 export default function LaunchPage() {
