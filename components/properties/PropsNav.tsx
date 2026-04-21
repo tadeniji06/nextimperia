@@ -18,7 +18,7 @@ import {
 } from "@/utils/listings";
 
 const PropsNav = () => {
-	const [activeProperty, setActiveProperty] = useState("emerald");
+	const [activeProperty, setActiveProperty] = useState("oak");
 
 	// Combine listings by property type
 	const emeraldListings = [...emeraldOneBed, ...emeraldTwoBed];
@@ -30,13 +30,6 @@ const PropsNav = () => {
 	];
 
 	const propertyInfo = {
-		emerald: {
-			title: "Emerald Apartments",
-			description:
-				"Emerald consists of 1 and 2 bedroom apartments, having 2 blocks of 25 floors with each floor",
-			listings: emeraldListings,
-			color: "emerald",
-		},
 		oak: {
 			title: "Oak West",
 			description:
@@ -51,13 +44,6 @@ const PropsNav = () => {
 			listings: amet,
 			color: "purple",
 		},
-		aria: {
-			title: "Aria Park",
-			description:
-				"A distinguished development discreetly nestled in the leafy suburbs of Karen, Nairobi. The address where sophistication effortlessly meets with the splendor of nature.",
-			listings: aria,
-			color: "indigo",
-		},
 		bf1: {
 			title: "Forest One",
 			description:
@@ -71,6 +57,20 @@ const PropsNav = () => {
 				"Brookside One offers premium living spaces with top-tier amenities in Westlands.",
 			listings: brooksideOne,
 			color: "cyan",
+		},
+		aria: {
+			title: "Aria Park",
+			description:
+				"A distinguished development discreetly nestled in the leafy suburbs of Karen, Nairobi. The address where sophistication effortlessly meets with the splendor of nature.",
+			listings: aria,
+			color: "indigo",
+		},
+		emerald: {
+			title: "Emerald Apartments",
+			description:
+				"Emerald consists of 1 and 2 bedroom apartments, having 2 blocks of 25 floors with each floor",
+			listings: emeraldListings,
+			color: "emerald",
 		},
 	};
 
@@ -144,18 +144,6 @@ const PropsNav = () => {
 				<div className='bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-5xl overflow-x-auto'>
 					<button
 						type='button'
-						onClick={() => setActiveProperty("emerald")}
-						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
-							activeProperty === "emerald"
-								? "bg-gray-900 text-white shadow-md"
-								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
-						}`}
-						style={{ WebkitTapHighlightColor: "transparent" }}
-					>
-						Emerald Springs
-					</button>
-					<button
-						type='button'
 						onClick={() => setActiveProperty("oak")}
 						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
 							activeProperty === "oak"
@@ -180,18 +168,6 @@ const PropsNav = () => {
 					</button>
 					<button
 						type='button'
-						onClick={() => setActiveProperty("aria")}
-						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
-							activeProperty === "aria"
-								? "bg-gray-900 text-white shadow-md"
-								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
-						}`}
-						style={{ WebkitTapHighlightColor: "transparent" }}
-					>
-						Aria Park
-					</button>
-					<button
-						type='button'
 						onClick={() => setActiveProperty("bf1")}
 						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
 							activeProperty === "bf1"
@@ -213,6 +189,30 @@ const PropsNav = () => {
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
 						Brookside One
+					</button>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("aria")}
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
+							activeProperty === "aria"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Aria Park
+					</button>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("emerald")}
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
+							activeProperty === "emerald"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Emerald Springs
 					</button>
 				</div>
 			</div>
