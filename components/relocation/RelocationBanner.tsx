@@ -4,6 +4,8 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { rlc } from "@/assets";
 
 const PERKS = [
 	{ icon: "mdi:passport", text: "Visa & Immigration" },
@@ -73,52 +75,34 @@ export default function RelocationBanner() {
 						</Link>
 					</motion.div>
 
-					{/* Right: Floating PDF mockup */}
+					{/* Right: Floating Image */}
 					<motion.div
 						initial={{ opacity: 0, x: 30 }}
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ duration: 0.7, delay: 0.15 }}
 						className="flex justify-center lg:justify-end"
 					>
-						<div className="relative">
-							{/* Glow */}
-							<div className="absolute inset-0 flex items-center justify-center">
-								<div className="w-64 h-64 rounded-full border-[8px] border-primary/5" />
-							</div>
-
-							{/* Stacked pages */}
-							<div className="relative" style={{ perspective: "800px" }}>
-								<div className="absolute top-5 left-5 w-52 h-72 bg-gray-200 rounded-2xl opacity-60 rotate-3" />
-								<div className="absolute top-2.5 left-2.5 w-52 h-72 bg-gray-100 rounded-2xl opacity-80 rotate-1" />
-
-								{/* Main cover */}
-								<motion.div
-									animate={{ y: [0, -12, 0] }}
-									transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-									className="relative w-52 h-72 rounded-2xl overflow-hidden shadow-2xl border border-gray-200"
-								>
-									<div className="absolute inset-0 bg-white">
-										<div className="h-[55%] bg-white flex items-center justify-center relative overflow-hidden border-b-[6px] border-primary">
-											<div className="absolute top-2 left-2 text-[8px] font-black text-primary border border-primary px-1.5 py-0.5 leading-tight">
-												IMPERIA<br /><span className="font-light">CONSULTING</span>
-											</div>
-											<p className="text-4xl font-black text-gray-100 tracking-widest">KENYA</p>
-										</div>
-										<div className="h-[45%] bg-white flex flex-col justify-end p-3">
-											<p className="text-primary font-black text-sm leading-tight">RELOCATION<br />GUIDE TO KENYA</p>
-											<p className="text-gray-500 font-semibold text-[9px] mt-1">For Diplomats and Expats</p>
-										</div>
-									</div>
-								</motion.div>
-
+						<div className="relative w-full max-w-md">
+							{/* Background Decoration */}
+							<div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-primary/10 to-transparent blur-xl" />
+							<div className="absolute inset-0 translate-x-4 translate-y-4 rounded-3xl bg-gray-100 border border-gray-200" />
+							
+							{/* Main Image */}
+							<div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] group">
+								<Image
+									src={rlc}
+									alt="Relocation Guide to Kenya"
+									fill
+									className="object-cover group-hover:scale-105 transition-transform duration-700"
+								/>
+								<div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent flex flex-col justify-end p-8">
+									<p className="text-white font-black text-2xl leading-tight">RELOCATION<br />GUIDE TO KENYA</p>
+									<p className="text-gray-300 font-medium text-sm mt-2">For Diplomats and Expats</p>
+								</div>
 								{/* Free badge */}
-								<motion.div
-									animate={{ rotate: [0, 8, 0, -5, 0] }}
-									transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-									className="absolute -top-4 -right-4 bg-white text-primary border border-primary/20 text-xs font-black px-3 py-2 rounded-xl shadow-lg"
-								>
+								<div className="absolute -top-4 -right-4 bg-primary text-white text-xs font-black px-4 py-2 rounded-xl shadow-lg">
 									FREE PDF
-								</motion.div>
+								</div>
 							</div>
 						</div>
 					</motion.div>
