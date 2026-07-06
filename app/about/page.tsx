@@ -1,4 +1,5 @@
-import AboutHero from "@/components/about/AboutHero";
+import AboutCompany from "@/components/about/AboutCompany";
+import CEOSection from "@/components/about/CEOSection";
 import Mission from "@/components/about/Mission";
 import Offer from "@/components/about/Offer";
 import ReadyCTA from "@/components/about/ReadyCTA";
@@ -22,8 +23,9 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
 	return (
-		<div className='min-h-screen'>
-			<AboutHero />
+		<div className='min-h-screen pt-24'>
+			<AboutCompany />
+			<CEOSection />
 			<Mission />
 			<Offer />
 			<ReadyCTA />

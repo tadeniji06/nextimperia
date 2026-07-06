@@ -1,11 +1,9 @@
 "use client";
 
-import { map } from "@/assets";
 import { socials } from "@/utils/data";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef, useState } from "react";
-import Image from "next/image";
 
 const Contact = () => {
 	const ref = useRef(null);
@@ -14,7 +12,7 @@ const Contact = () => {
 		margin: "-50px 0px",
 	});
 
-	const [formData, setFormData] = useState({ name: "", message: "" });
+	const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const handleInputChange = (
@@ -33,320 +31,199 @@ const Contact = () => {
 		setTimeout(() => {
 			console.log("Form submitted:", formData);
 			setIsSubmitting(false);
-			setFormData({ name: "", message: "" });
+			setFormData({ name: "", email: "", message: "" });
 		}, 2000);
 	};
 
-	// Properly typed variants
+	// Animation Variants
 	const containerVariants: Variants = {
-		hidden: {
-			opacity: 0,
-		},
+		hidden: { opacity: 0 },
 		visible: {
 			opacity: 1,
-			transition: {
-				staggerChildren: 0.2,
-				delayChildren: 0.1,
-			},
+			transition: { staggerChildren: 0.2, delayChildren: 0.1 },
 		},
 	};
 
-	const mapVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			scale: 0.8,
-			y: 50,
-		},
-		visible: {
-			opacity: 1,
-			scale: 1,
-			y: 0,
-			transition: {
-				duration: 0.8,
-				ease: "easeOut",
-			},
-		},
-	};
-
-	const contentVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			y: 50,
-		},
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				duration: 0.6,
-				ease: "easeOut",
-			},
-		},
-	};
-
-	const formItemVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			y: 20,
-		},
-		visible: {
-			opacity: 1,
-			y: 0,
-		},
-	};
-
-	const buttonVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			y: 20,
-		},
-		visible: {
-			opacity: 1,
-			y: 0,
-		},
-		hover: {
-			scale: 1.02,
-		},
-		tap: {
-			scale: 0.98,
-		},
-	};
-
-	const socialLinkVariants: Variants = {
-		hidden: {
-			opacity: 0,
-			scale: 0.8,
-		},
-		visible: {
-			opacity: 1,
-			scale: 1,
-		},
-		hover: {
-			scale: 1.05,
-		},
-		tap: {
-			scale: 0.95,
-		},
+	const itemVariants: Variants = {
+		hidden: { opacity: 0, y: 30 },
+		visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 	};
 
 	return (
-		<section className='bg-gradient-to-br from-gray-50 to-gray-100 py-8 sm:py-12'>
+		<div className="bg-gray-50 min-h-screen pt-24 pb-20">
 			<motion.div
 				ref={ref}
-				initial='hidden'
+				initial="hidden"
 				animate={isInView ? "visible" : "hidden"}
 				variants={containerVariants}
-				className='flex flex-col min-h-screen px-4 sm:px-6 lg:px-8'
+				className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-16"
 			>
-				{/* Header */}
-				<motion.div
-					variants={contentVariants}
-					className='text-center mb-8 sm:mb-12'
-				>
-					<h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4'>
-						Get in Touch
+				{/* Hero Header */}
+				<motion.div variants={itemVariants} className="text-center max-w-3xl mx-auto">
+					<div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-6">
+						<Icon icon="mdi:email-fast-outline" className="text-primary text-3xl" />
+					</div>
+					<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+						Let's <span className="text-primary">Connect</span>
 					</h1>
-					<p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-						Ready to find your dream property? Contact us today and
-						let's make it happen.
+					<p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+						Whether you're looking for prime real estate, sustainable development advisory, or strategic investments in Kenya, our experts are ready to assist you.
 					</p>
 				</motion.div>
 
-				{/* Map */}
-				<motion.div
-					variants={mapVariants}
-					className='flex justify-center mb-10'
-				>
-					<div className='w-full max-w-6xl h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg'>
-						<Image
-							src={map}
-							alt='Our Location'
-							className='w-full h-full object-cover'
-							width={1200}
-							height={500}
-							priority
-						/>
-					</div>
-				</motion.div>
-
-				{/* Contact Content */}
-				<motion.div
-					variants={containerVariants}
-					className='max-w-6xl mx-auto w-full'
-				>
-					<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>
-						{/* Contact Info & Socials */}
-						<motion.div
-							variants={contentVariants}
-							className='space-y-8'
-						>
-							<div>
-								<h2 className='text-2xl sm:text-3xl font-bold text-gray-800 mb-4'>
-									Connect with Us
-								</h2>
-								<p className='text-gray-600 mb-8 text-lg'>
-									Reach out through social media, give us a call, or
-									send us a message below.
-								</p>
-
-								{/* Contact Info */}
-								<div className='space-y-6 mb-8'>
-									<div className='flex items-center space-x-4'>
-										<div className='w-12 h-12 bg-primary rounded-full flex items-center justify-center'>
-											<Icon
-												icon='material-symbols:phone'
-												className='text-xl text-white'
-											/>
-										</div>
-										<div>
-											<p className='text-sm text-gray-500 uppercase tracking-wide'>
-												Phone
-											</p>
-											<a
-												href='tel:+254116071190'
-												className='text-lg font-semibold text-gray-800 hover:text-primary transition-colors duration-200'
-											>
-												+254 116 071 190
-											</a>
-										</div>
+				<div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+					{/* Contact Details & Socials (Col Span 2) */}
+					<motion.div variants={itemVariants} className="lg:col-span-2 space-y-10">
+						<div className="bg-white rounded-3xl p-8 shadow-xl shadow-primary/5 border border-gray-100">
+							<h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+							
+							<div className="space-y-8">
+								<div className="flex items-start gap-5">
+									<div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+										<Icon icon="mdi:phone-in-talk" className="text-2xl text-primary" />
 									</div>
-
-									<div className='flex items-center space-x-4'>
-										<div className='w-12 h-12 bg-primary rounded-full flex items-center justify-center'>
-											<Icon
-												icon='material-symbols:location-on'
-												className='text-xl text-white'
-											/>
-										</div>
-										<div>
-											<p className='text-sm text-gray-500 uppercase tracking-wide'>
-												Location
-											</p>
-											<p className='text-lg font-semibold text-gray-800'>
-												Nairobi, Kenya
-											</p>
-										</div>
+									<div>
+										<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Phone</p>
+										<a href="tel:+254116071190" className="text-xl font-bold text-gray-800 hover:text-primary transition-colors">
+											+254 116 071 190
+										</a>
 									</div>
 								</div>
 
-								{/* Social Media */}
-								<div>
-									<h3 className='text-xl font-semibold text-gray-800 mb-4'>
-										Follow Us
-									</h3>
-									<div className='grid grid-cols-2 gap-4'>
-										{socials.map((item, idx) => (
-											<motion.a
-												key={idx}
-												href={item.link}
-												target='_blank'
-												rel='noopener noreferrer'
-												variants={socialLinkVariants}
-												whileHover='hover'
-												whileTap='tap'
-												className='flex items-center space-x-3 p-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 group'
-											>
-												<Icon
-													icon={item.icon}
-													className='text-2xl text-primary group-hover:scale-110 transition-transform duration-200'
-												/>
-												<span className='text-gray-700 font-medium group-hover:text-primary transition-colors duration-200'>
-													{item.name}
-												</span>
-											</motion.a>
-										))}
+								<div className="flex items-start gap-5">
+									<div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+										<Icon icon="mdi:email-outline" className="text-2xl text-primary" />
+									</div>
+									<div>
+										<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Email</p>
+										<a href="mailto:info@imperiaconsulting.com" className="text-xl font-bold text-gray-800 hover:text-primary transition-colors">
+											info@imperiaconsulting.com
+										</a>
+									</div>
+								</div>
+
+								<div className="flex items-start gap-5">
+									<div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+										<Icon icon="mdi:map-marker-radius" className="text-2xl text-primary" />
+									</div>
+									<div>
+										<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Location</p>
+										<p className="text-xl font-bold text-gray-800">
+											Nairobi, Kenya
+										</p>
 									</div>
 								</div>
 							</div>
-						</motion.div>
 
-						{/* Contact Form */}
-						<motion.div
-							variants={contentVariants}
-							className='bg-white rounded-2xl shadow-xl p-6 sm:p-8'
-						>
-							<h2 className='text-2xl sm:text-3xl font-bold text-gray-800 mb-6'>
-								Send us a Message
-							</h2>
+							<div className="mt-12 pt-8 border-t border-gray-100">
+								<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-5">Follow Our Socials</p>
+								<div className="flex gap-4">
+									{socials.map((item, idx) => (
+										<a
+											key={idx}
+											href={item.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1 hover:shadow-lg"
+											aria-label={item.name}
+										>
+											<Icon icon={item.icon} className="text-2xl" />
+										</a>
+									))}
+								</div>
+							</div>
+						</div>
+					</motion.div>
 
-							<form onSubmit={handleSubmit} className='space-y-6'>
-								<motion.div
-									variants={formItemVariants}
-									initial='hidden'
-									animate='visible'
-									transition={{ delay: 0.4, duration: 0.5 }}
-								>
-									<label className='block text-sm font-medium text-gray-700 mb-2'>
-										Full Name *
-									</label>
-									<input
-										type='text'
-										name='name'
-										value={formData.name}
-										onChange={handleInputChange}
-										required
-										className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200'
-										placeholder='Your full name'
-									/>
-								</motion.div>
+					{/* Contact Form (Col Span 3) */}
+					<motion.div variants={itemVariants} className="lg:col-span-3">
+						<div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl shadow-primary/5 border border-gray-100">
+							<h3 className="text-3xl font-bold text-gray-900 mb-2">Send a Message</h3>
+							<p className="text-gray-500 mb-10">We typically reply within a few hours.</p>
 
-								<motion.div
-									variants={formItemVariants}
-									initial='hidden'
-									animate='visible'
-									transition={{ delay: 0.5, duration: 0.5 }}
-								>
-									<label className='block text-sm font-medium text-gray-700 mb-2'>
-										Message *
-									</label>
+							<form onSubmit={handleSubmit} className="space-y-6">
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div className="space-y-2">
+										<label className="text-sm font-semibold text-gray-700">Full Name</label>
+										<input
+											type="text"
+											name="name"
+											value={formData.name}
+											onChange={handleInputChange}
+											required
+											className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+											placeholder="John Doe"
+										/>
+									</div>
+									<div className="space-y-2">
+										<label className="text-sm font-semibold text-gray-700">Email Address</label>
+										<input
+											type="email"
+											name="email"
+											value={formData.email}
+											onChange={handleInputChange}
+											required
+											className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+											placeholder="john@example.com"
+										/>
+									</div>
+								</div>
+								
+								<div className="space-y-2">
+									<label className="text-sm font-semibold text-gray-700">Your Message</label>
 									<textarea
-										name='message'
+										name="message"
 										value={formData.message}
 										onChange={handleInputChange}
 										required
-										rows={5}
-										className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none transition-all duration-200'
-										placeholder='How can we help you?'
+										rows={6}
+										className="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
+										placeholder="How can we assist you today?"
 									/>
-								</motion.div>
+								</div>
 
-								<motion.button
-									type='submit'
+								<button
+									type="submit"
 									disabled={isSubmitting}
-									variants={buttonVariants}
-									initial='hidden'
-									animate='visible'
-									whileHover={isSubmitting ? undefined : "hover"}
-									whileTap={isSubmitting ? undefined : "tap"}
-									transition={{ delay: 0.6, duration: 0.5 }}
-									className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${
+									className={`w-full py-5 rounded-xl font-bold text-white text-lg transition-all ${
 										isSubmitting
 											? "bg-gray-400 cursor-not-allowed"
-											: "bg-primary hover:bg-primary/90 hover:shadow-lg"
+											: "bg-primary hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 transform hover:-translate-y-1"
 									}`}
 								>
 									{isSubmitting ? (
-										<div className='flex items-center justify-center'>
-											<motion.div
-												animate={{ rotate: 360 }}
-												transition={{
-													duration: 1,
-													repeat: Infinity,
-													ease: "linear",
-												}}
-												className='w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2'
-											/>
-											Sending Message...
-										</div>
+										<span className="flex items-center justify-center gap-3">
+											<Icon icon="mdi:loading" className="text-2xl animate-spin" />
+											Sending...
+										</span>
 									) : (
-										"Send Message"
+										<span className="flex items-center justify-center gap-2">
+											Submit Message
+											<Icon icon="mdi:send-outline" className="text-xl" />
+										</span>
 									)}
-								</motion.button>
+								</button>
 							</form>
-						</motion.div>
-					</div>
+						</div>
+					</motion.div>
+				</div>
+
+				{/* Interactive Google Map */}
+				<motion.div variants={itemVariants} className="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[400px] lg:h-[500px] relative z-10">
+					<iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.51704257134!2d36.73970228026131!3d-1.283307616239103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1714578912345!5m2!1sen!2sus" 
+						width="100%" 
+						height="100%" 
+						style={{ border: 0 }} 
+						allowFullScreen={true} 
+						loading="lazy" 
+						referrerPolicy="no-referrer-when-downgrade"
+						title="Imperia Consulting Location"
+						className="grayscale hover:grayscale-0 transition-all duration-700"
+					></iframe>
 				</motion.div>
 			</motion.div>
-		</section>
+		</div>
 	);
 };
 

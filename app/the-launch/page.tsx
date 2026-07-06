@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11 } from "@/assets";
+import { t3, t9, t11 } from "@/assets";
 
-const images = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11];
+const images = [ t3, t9, t11];
 const videos = [
 	{ id: 1, src: "/main1.mp4", title: "Official Launch Video" },
 	// { id: 2, src: "/vid2.mp4", title: "The Experience" },

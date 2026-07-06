@@ -1,5 +1,5 @@
 import Apartments from "@/components/home/Apartments";
-import Featured from "@/components/home/Featured";
+// import Featured from "@/components/home/Featured";
 import Hero from "@/components/home/Hero";
 import Stats from "@/components/home/Stats";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -10,7 +10,7 @@ export default function Home() {
 		<div className='min-h-screen'>
 			{/* <Announcement /> */}
 			<Hero />
-			<Featured />
+			{/* <Featured /> */}
 			<Apartments />
 			<WhyChooseUs />
 			<Stats />
