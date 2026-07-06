@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Services = () => {
   const [activeCategory, setActiveCategory] = useState(0);
-  const [hoveredService, setHoveredService] = useState(null);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   const serviceCategories = [
     {
@@ -18,7 +18,7 @@ const Services = () => {
           icon: "fa6-solid:handshake-angle"
         },
         {
-          name: "Dispute Resolution & Mediation",
+          name: "Dispute Resolution (Between Tenant and Owners)",
           description: "Between tenants or with neighbors",
           icon: "mdi:scale-balance"
         },
