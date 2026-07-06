@@ -27,6 +27,10 @@ export const navLinks = [
 		name: "Blogs",
 		link: "/blogs",
 	},
+	{
+		name: "Relocation Guide",
+		link: "/relocation-guide",
+	},
 ];
 
 export const WALink = {
