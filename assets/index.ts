@@ -92,10 +92,12 @@ import b2 from "./b2.jpeg";
 import b3 from "./b3.jpeg";
 import b4 from "./b4.jpeg";
 import b5 from "./b5.jpeg";
+import mo from "./mo.jpeg";
 
 import rlc from './relocationbanner.jpg';
 export {
 	logo,
+	mo,
 	t1,
 	rlc,
 	t2,
