@@ -18,7 +18,7 @@ import {
 } from "@/utils/listings";
 
 const PropsNav = () => {
-	const [activeProperty, setActiveProperty] = useState("oak");
+	const [activeProperty, setActiveProperty] = useState("bf1");
 
 	// Combine listings by property type
 	const emeraldListings = [...emeraldOneBed, ...emeraldTwoBed];
@@ -30,6 +30,13 @@ const PropsNav = () => {
 	];
 
 	const propertyInfo = {
+		bf1: {
+			title: "Forest One Residency",
+			description:
+				"Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction.",
+			listings: brooksideForestOne,
+			color: "teal",
+		},
 		oak: {
 			title: "Oak West",
 			description:
@@ -37,26 +44,12 @@ const PropsNav = () => {
 			listings: oakListings,
 			color: "amber",
 		},
-		ame: {
-			title: "Amethyst",
+		emerald: {
+			title: "Emerald Springs",
 			description:
-				"Luxury living at its finest with modern amenities and prime location.",
-			listings: amet,
-			color: "purple",
-		},
-		bf1: {
-			title: "Forest One",
-			description:
-				"Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction.",
-			listings: brooksideForestOne,
-			color: "teal",
-		},
-		b1: {
-			title: "Brookside One",
-			description:
-				"Brookside One offers premium living spaces with top-tier amenities in Westlands.",
-			listings: brooksideOne,
-			color: "cyan",
+				"Emerald consists of 1 and 2 bedroom apartments, having 2 blocks of 25 floors with each floor",
+			listings: emeraldListings,
+			color: "emerald",
 		},
 		aria: {
 			title: "Aria Park",
@@ -65,12 +58,19 @@ const PropsNav = () => {
 			listings: aria,
 			color: "indigo",
 		},
-		emerald: {
-			title: "Emerald Apartments",
+		b1: {
+			title: "Brookside Oak",
 			description:
-				"Emerald consists of 1 and 2 bedroom apartments, having 2 blocks of 25 floors with each floor",
-			listings: emeraldListings,
-			color: "emerald",
+				"Brookside Oak (Brookside One) offers premium living spaces with top-tier amenities in Westlands.",
+			listings: brooksideOne,
+			color: "cyan",
+		},
+		ame: {
+			title: "Amethyst",
+			description:
+				"Luxury living at its finest with modern amenities and prime location.",
+			listings: amet,
+			color: "purple",
 		},
 	};
 
@@ -79,18 +79,18 @@ const PropsNav = () => {
 
 	const getPropertyDisplayName = (propertyType: any) => {
 		switch (propertyType) {
-			case "emerald":
-				return "Emerald";
+			case "bf1":
+				return "Forest One (F.O.R)";
 			case "oak":
 				return "Oak West";
-			case "ame":
-				return "Amethyst";
+			case "emerald":
+				return "Emerald";
 			case "aria":
 				return "Aria Park";
-			case "bf1":
-				return "Forest One";
 			case "b1":
-				return "Brookside One";
+				return "Brookside Oak";
+			case "ame":
+				return "Amethyst";
 			default:
 				return "Property";
 		}
@@ -101,18 +101,18 @@ const PropsNav = () => {
 		type = "bg",
 	) => {
 		switch (propertyType) {
-			case "emerald":
-				return type === "bg" ? "bg-emerald-500" : "text-emerald-600";
-			case "oak":
-				return type === "bg" ? "bg-amber-500" : "text-amber-600";
-			case "ame":
-				return type === "bg" ? "bg-purple-500" : "text-purple-600";
-			case "aria":
-				return type === "bg" ? "bg-indigo-500" : "text-indigo-600";
 			case "bf1":
 				return type === "bg" ? "bg-teal-500" : "text-teal-600";
+			case "oak":
+				return type === "bg" ? "bg-amber-500" : "text-amber-600";
+			case "emerald":
+				return type === "bg" ? "bg-emerald-500" : "text-emerald-600";
+			case "aria":
+				return type === "bg" ? "bg-indigo-500" : "text-indigo-600";
 			case "b1":
 				return type === "bg" ? "bg-cyan-500" : "text-cyan-600";
+			case "ame":
+				return type === "bg" ? "bg-purple-500" : "text-purple-600";
 			default:
 				return type === "bg" ? "bg-gray-500" : "text-gray-600";
 		}
@@ -120,18 +120,18 @@ const PropsNav = () => {
 
 	const getGradientClasses = (propertyType: any) => {
 		switch (propertyType) {
-			case "emerald":
-				return "from-emerald-500 to-emerald-600";
-			case "oak":
-				return "from-amber-500 to-amber-600";
-			case "ame":
-				return "from-purple-500 to-purple-600";
-			case "aria":
-				return "from-indigo-500 to-indigo-600";
 			case "bf1":
 				return "from-teal-500 to-teal-600";
+			case "oak":
+				return "from-amber-500 to-amber-600";
+			case "emerald":
+				return "from-emerald-500 to-emerald-600";
+			case "aria":
+				return "from-indigo-500 to-indigo-600";
 			case "b1":
 				return "from-cyan-500 to-cyan-600";
+			case "ame":
+				return "from-purple-500 to-purple-600";
 			default:
 				return "from-gray-500 to-gray-600";
 		}
@@ -142,6 +142,18 @@ const PropsNav = () => {
 			{/* Centralized Toggle - Above Header */}
 			<div className='flex justify-center mb-6 sm:mb-8'>
 				<div className='bg-gray-100 p-1 rounded-lg inline-flex w-full max-w-5xl overflow-x-auto'>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("bf1")}
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
+							activeProperty === "bf1"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Forest One (F.O.R)
+					</button>
 					<button
 						type='button'
 						onClick={() => setActiveProperty("oak")}
@@ -156,39 +168,15 @@ const PropsNav = () => {
 					</button>
 					<button
 						type='button'
-						onClick={() => setActiveProperty("ame")}
+						onClick={() => setActiveProperty("emerald")}
 						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
-							activeProperty === "ame"
+							activeProperty === "emerald"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
 						}`}
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
-						Amethyst
-					</button>
-					<button
-						type='button'
-						onClick={() => setActiveProperty("bf1")}
-						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
-							activeProperty === "bf1"
-								? "bg-gray-900 text-white shadow-md"
-								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
-						}`}
-						style={{ WebkitTapHighlightColor: "transparent" }}
-					>
-						Forest One
-					</button>
-					<button
-						type='button'
-						onClick={() => setActiveProperty("b1")}
-						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
-							activeProperty === "b1"
-								? "bg-gray-900 text-white shadow-md"
-								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
-						}`}
-						style={{ WebkitTapHighlightColor: "transparent" }}
-					>
-						Brookside One
+						Emerald
 					</button>
 					<button
 						type='button'
@@ -204,15 +192,27 @@ const PropsNav = () => {
 					</button>
 					<button
 						type='button'
-						onClick={() => setActiveProperty("emerald")}
+						onClick={() => setActiveProperty("b1")}
 						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
-							activeProperty === "emerald"
+							activeProperty === "b1"
 								? "bg-gray-900 text-white shadow-md"
 								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
 						}`}
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
-						Emerald Springs
+						Brookside Oak
+					</button>
+					<button
+						type='button'
+						onClick={() => setActiveProperty("ame")}
+						className={`flex-1 min-w-[100px] px-3 sm:px-4 py-3 sm:py-4 rounded-md text-xs sm:text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer touch-manipulation whitespace-nowrap ${
+							activeProperty === "ame"
+								? "bg-gray-900 text-white shadow-md"
+								: "text-gray-600 hover:text-gray-800 hover:bg-gray-50 active:bg-gray-200"
+						}`}
+						style={{ WebkitTapHighlightColor: "transparent" }}
+					>
+						Amethyst
 					</button>
 				</div>
 			</div>

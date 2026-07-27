@@ -63,10 +63,10 @@ import {
 
 export const featured = [
 	{
-		img: am1,
-		title: "Amethyst",
-		desc: "A perfect blend of urban sophistication and comfort",
-		location: "Denis Pritt",
+		img: bf1,
+		title: "Forest One Residency",
+		desc: "Luxury living centered on functionality, distinction, and elegance",
+		location: "Westlands, Nairobi",
 	},
 	{
 		img: oak,
@@ -75,7 +75,7 @@ export const featured = [
 		location: "Westlands, Nairobi",
 	},
 	{
-		img: eme,
+		img: bf1,
 		title: "EMERALD SPRINGS",
 		desc: "Flexible payment plan until completion October, 2026",
 		location: "Westlands, Nairobi",
@@ -174,7 +174,7 @@ export const emeraldOneBed = [
 	{
 		id: "emerald-1-bedroom",
 		title: "1 BEDROOM APARTMENT",
-		mainImg: e1main,
+		mainImg: bf1,
 		flyer: e1flyer,
 		photos: [e11, e12, e13, e14],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
@@ -355,7 +355,7 @@ export const brooksideForestOne = [
 		id: "forest-one-residency",
 		title: "Forest One Residency",
 		mainImg: bf1,
-		photos: [bf1, bf2, bf3, bf4, bf5],
+		photos: [bf2, bf3, bf4, bf5],
 		desc: `Forest One Residency embodies a design philosophy centered on luxury, functionality, and distinction. Our approach merges modern aesthetics with practical elegance, ensuring our residence offers a harmonious blend of style and comfort. With its prime location, high rental demand, and contemporary amenities, this apartment is an ideal choice for savvy investors looking to expand their portfolio. 
 Expected Completion: September 2028. Flexible Off-Plan Payment Plans Available. Secure Your Unit with a 20% Deposit.`,
 		location: "Westlands, Nairobi, Kenya",

@@ -50,9 +50,16 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 		if (found) {
 			setProperty(found);
 			if (found.photos && Array.isArray(found.photos)) {
-				const valid = found.photos.filter(
-					(img: any) => img && typeof img === "object" && img.src,
-				);
+				const seen = new Set<string>();
+				const valid: StaticImageData[] = [];
+				found.photos.forEach((img: any) => {
+					if (img && typeof img === "object" && img.src) {
+						if (!seen.has(img.src) && img.src !== found.mainImg?.src) {
+							seen.add(img.src);
+							valid.push(img);
+						}
+					}
+				});
 				setGalleryImages(valid);
 			}
 		}

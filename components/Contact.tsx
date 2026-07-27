@@ -1,6 +1,6 @@
 "use client";
 
-import { socials } from "@/utils/data";
+import { socials, WALink } from "@/utils/data";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef, useState } from "react";
@@ -79,13 +79,19 @@ const Contact = () => {
 							
 							<div className="space-y-8">
 								<div className="flex items-start gap-5">
-									<div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
-										<Icon icon="mdi:phone-in-talk" className="text-2xl text-primary" />
+									<div className="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center shrink-0">
+										<Icon icon="ic:baseline-whatsapp" className="text-2xl text-green-600" />
 									</div>
 									<div>
-										<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Phone</p>
-										<a href="tel:+254116071190" className="text-xl font-bold text-gray-800 hover:text-primary transition-colors">
-											+254 116 071 190
+										<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">WhatsApp</p>
+										<a 
+											href={WALink.link}
+											target="_blank"
+											rel="noopener noreferrer" 
+											className="inline-flex items-center gap-2 text-xl font-bold text-gray-800 hover:text-green-600 transition-colors"
+										>
+											Chat on WhatsApp
+											<Icon icon="mdi:open-in-new" className="text-sm" />
 										</a>
 									</div>
 								</div>
