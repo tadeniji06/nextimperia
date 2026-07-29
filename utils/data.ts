@@ -16,7 +16,7 @@ export const navLinks = [
 		link: "/properties",
 	},
 	{
-		name: "The Launch",
+		name: "Gallery",
 		link: "/the-launch",
 	},
 	{
