@@ -1,13 +1,15 @@
 'use client';
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Services = () => {
   const coreServices = [
     {
       id: 1,
-      title: "Real Estate & Investment Advisory",
+      title: "Real Estate Investment Advisory",
       icon: "mdi:office-building",
+      image: "/images/meeting.jpg",
       description: "We connect investors to carefully selected property opportunities, particularly in high-growth urban markets such as Nairobi. Our comprehensive approach ensures your investments are secure and profitable.",
       features: [
         "Project Identification & Analysis",
@@ -23,6 +25,7 @@ const Services = () => {
       id: 2,
       title: "Environment & Sustainable Development",
       icon: "mdi:leaf",
+      image: "/images/sdg.jpg",
       description: "Leveraging deep expertise from global institutions like the United Nations Environment Programme and WHO. We guide projects toward environmental responsibility and long-term sustainability.",
       features: [
         "Environmental Management Consulting",
@@ -38,6 +41,7 @@ const Services = () => {
       id: 3,
       title: "Tourism & Hospitality Advisory",
       icon: "mdi:compass-rose",
+      image: "/images/nairobi.jpg",
       description: "Supporting the development and positioning of hospitality ventures and tourism-related investments, with a focus on quality, sustainability, and creating memorable experiences.",
       features: [
         "Hospitality Venture Development",
@@ -93,11 +97,11 @@ const Services = () => {
                   <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/50 to-transparent rounded-full translate-y-1/3 -translate-x-1/3"></div>
 
                   <motion.div 
-                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                    className={`relative z-10 w-40 h-40 md:w-56 md:h-56 rounded-full bg-gradient-to-br ${service.color} shadow-2xl flex items-center justify-center text-white`}
+                    className={`relative z-10 w-[85%] h-[85%] md:w-[90%] md:h-[90%] rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden`}
                   >
-                    <Icon icon={service.icon} className="text-6xl md:text-8xl drop-shadow-lg" />
+                    <Image src={service.image} alt={service.title} fill className="object-cover" />
                   </motion.div>
                 </div>
               </div>
