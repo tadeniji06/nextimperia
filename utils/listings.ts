@@ -75,7 +75,7 @@ export const featured = [
 		location: "Westlands, Nairobi",
 	},
 	{
-		img: bf1,
+		img: "/images/emerald.jpg",
 		title: "EMERALD SPRINGS",
 		desc: "Flexible payment plan until completion October, 2026",
 		location: "Westlands, Nairobi",
@@ -174,7 +174,7 @@ export const emeraldOneBed = [
 	{
 		id: "emerald-1-bedroom",
 		title: "1 BEDROOM APARTMENT",
-		mainImg: bf1,
+		mainImg: "/images/emerald.jpg",
 		flyer: e1flyer,
 		photos: [e11, e12, e13, e14],
 		desc: "A thoughtfully designed space combining comfort, privacy, and style ideal for individuals or couples seeking modern living in a serene environment.",
