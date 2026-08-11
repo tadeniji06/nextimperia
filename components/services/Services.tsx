@@ -99,9 +99,9 @@ const Services = () => {
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                    className={`relative z-10 w-[85%] h-[85%] md:w-[90%] md:h-[90%] rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden`}
+                    className={`relative z-10 w-[85%] h-[85%] md:w-[90%] md:h-[90%] flex items-center justify-center`}
                   >
-                    <Image src={service.image} alt={service.title} fill className="object-cover" />
+                    <Image src={service.image} alt={service.title} fill className="object-contain drop-shadow-2xl rounded-2xl" />
                   </motion.div>
                 </div>
               </div>
