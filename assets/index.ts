@@ -95,6 +95,21 @@ import b5 from "./b5.jpeg";
 import mo from "./mo.jpeg";
 
 import rlc from './relocationbanner.jpg';
+
+import orcover from "./oakrise/cover.jpeg";
+import orcover2 from "./oakrise/cover2.jpeg";
+import ordetails from "./oakrise/details.jpeg";
+import or1 from "./oakrise/img1.jpeg";
+import or2 from "./oakrise/img2.jpeg";
+import or3 from "./oakrise/img3.jpeg";
+import or4 from "./oakrise/img4.jpeg";
+import orp1 from "./oakrise/plan1.jpeg";
+import orp2 from "./oakrise/plan2.jpeg";
+import orp3 from "./oakrise/plan3.jpeg";
+import orp4 from "./oakrise/plan4.jpeg";
+import orp5 from "./oakrise/plan5.jpeg";
+import orpx from "./oakrise/planx.jpeg";
+
 export {
 	logo,
 	mo,
@@ -183,4 +198,17 @@ export {
 	o34,
 	o3p,
 	amety,
+	orcover,
+	orcover2,
+	ordetails,
+	or1,
+	or2,
+	or3,
+	or4,
+	orp1,
+	orp2,
+	orp3,
+	orp4,
+	orp5,
+	orpx,
 };

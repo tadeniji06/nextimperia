@@ -59,6 +59,19 @@ import {
 	b3,
 	b4,
 	b5,
+	orcover,
+	orcover2,
+	ordetails,
+	or1,
+	or2,
+	or3,
+	or4,
+	orp1,
+	orp2,
+	orp3,
+	orp4,
+	orp5,
+	orpx,
 } from "../assets";
 
 export const featured = [
@@ -411,8 +424,8 @@ export const oakRise = [
 	{
 		id: "oak-rise",
 		title: "Oak Rise",
-		mainImg: b1,
-		photos: [b1, b2, b3, b4, b5],
+		mainImg: orcover,
+		photos: [orcover2, ordetails, or1, or2, or3, or4, orp1, orp2, orp3, orp4, orp5, orpx],
 		desc: `Oak Rise, one more upcoming masterpiece project in Nairobi real estate development industry after Riverside One and Rhapta One. Offering premium living spaces with top-tier amenities.`,
 		location: "Westlands, Nairobi, Kenya",
 		avgPrice: "From 14.5M KSH ($111,538)",

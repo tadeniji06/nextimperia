@@ -16,8 +16,6 @@ const GUIDE_FEATURES = [
 ];
 
 const STATS = [
-	{ value: "50+", label: "Pages of Expert Insight" },
-	{ value: "10+", label: "Key Life Chapters Covered" },
 	{ value: "Free", label: "Instant PDF Download" },
 ];
 
