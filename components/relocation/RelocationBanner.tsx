@@ -3,9 +3,9 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { rlc } from "@/assets";
+import RelocationFormModal from "./RelocationFormModal";
 
 const PERKS = [
 	{ icon: "mdi:passport", text: "Visa & Immigration" },
@@ -18,6 +18,7 @@ export default function RelocationBanner() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, margin: "-80px" });
 	const [hovered, setHovered] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	return (
 		<section ref={ref} className="relative overflow-hidden bg-white py-20 px-4 sm:px-6 lg:px-8 border-y border-gray-100">
@@ -61,8 +62,8 @@ export default function RelocationBanner() {
 						</div>
 
 						{/* CTA */}
-						<Link
-							href="/relocation-guide"
+						<button
+							onClick={() => setIsModalOpen(true)}
 							onMouseEnter={() => setHovered(true)}
 							onMouseLeave={() => setHovered(false)}
 							className="inline-flex items-center gap-3 bg-primary border border-red-700 hover:bg-red-700 text-white font-black text-base px-8 py-4 rounded-2xl transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 group"
@@ -72,7 +73,7 @@ export default function RelocationBanner() {
 							<motion.span animate={{ x: hovered ? 4 : 0 }} transition={{ duration: 0.2 }}>
 								<Icon icon="mdi:arrow-right" className="text-xl" />
 							</motion.span>
-						</Link>
+						</button>
 					</motion.div>
 
 					{/* Right: Floating Image */}
@@ -108,6 +109,11 @@ export default function RelocationBanner() {
 					</motion.div>
 				</div>
 			</div>
+
+			<RelocationFormModal 
+				isOpen={isModalOpen} 
+				onClose={() => setIsModalOpen(false)} 
+			/>
 		</section>
 	);
 }

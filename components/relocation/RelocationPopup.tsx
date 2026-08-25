@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import { rlc } from "@/assets";
+import RelocationFormModal from "./RelocationFormModal";
 
 export default function RelocationPopup() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	useEffect(() => {
 		const hasSeen = sessionStorage.getItem("hasSeenRelocationPopup");
@@ -24,8 +25,9 @@ export default function RelocationPopup() {
 	};
 
 	return (
-		<AnimatePresence>
-			{isOpen && (
+		<>
+			<AnimatePresence>
+				{isOpen && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center px-4">
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -78,19 +80,27 @@ export default function RelocationPopup() {
 								Get our comprehensive <strong>Relocation Guide</strong> covering housing, visas, schooling, healthcare, and cost of living. Built specifically for diplomats and expats.
 							</p>
 
-							<Link
-								href="/relocation-guide"
-								onClick={handleClose}
+							<button
+								onClick={() => {
+									handleClose();
+									setIsModalOpen(true);
+								}}
 								className="inline-flex w-fit items-center justify-center gap-3 bg-primary hover:bg-red-700 text-white font-black text-lg px-8 py-4 rounded-2xl transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 group"
 							>
 								<Icon icon="mdi:download-circle" className="text-2xl" />
 								Unlock Free Guide
 								<Icon icon="mdi:arrow-right" className="text-xl group-hover:translate-x-1 transition-transform" />
-							</Link>
+							</button>
 						</div>
 					</motion.div>
 				</div>
-			)}
-		</AnimatePresence>
+				)}
+			</AnimatePresence>
+
+			<RelocationFormModal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+			/>
+		</>
 	);
 }
