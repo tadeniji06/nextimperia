@@ -7,7 +7,7 @@ import {
 	oakOneBed,
 	emeraldOneBed,
 	aria,
-	brooksideOne,
+	oakRise,
 	amet,
 } from "@/utils/listings";
 import Image from "next/image";
@@ -19,6 +19,11 @@ const Apartments = () => {
 			data: brooksideForestOne[0],
 			badge: "F.O.R",
 			badgeColor: "bg-green-600",
+		},
+		{
+			data: oakRise[0],
+			badge: "Oak Rise",
+			badgeColor: "bg-blue-500",
 		},
 		{
 			data: oakOneBed[0],
@@ -34,11 +39,6 @@ const Apartments = () => {
 			data: aria[0],
 			badge: "Aria Park",
 			badgeColor: "bg-purple-500",
-		},
-		{
-			data: brooksideOne[0],
-			badge: "Brookside Oak",
-			badgeColor: "bg-blue-500",
 		},
 		{
 			data: amet[0],

@@ -407,13 +407,13 @@ Expected Completion: September 2028. Flexible Off-Plan Payment Plans Available. 
 	},
 ];
 
-export const brooksideOne = [
+export const oakRise = [
 	{
-		id: "brookside-one-project",
-		title: "Brookside One Residency",
+		id: "oak-rise",
+		title: "Oak Rise",
 		mainImg: b1,
 		photos: [b1, b2, b3, b4, b5],
-		desc: `Brookside One, one more upcoming masterpiece project in Nairobi real estate development industry after Riverside One and Rhapta One. Offering premium living spaces with top-tier amenities.`,
+		desc: `Oak Rise, one more upcoming masterpiece project in Nairobi real estate development industry after Riverside One and Rhapta One. Offering premium living spaces with top-tier amenities.`,
 		location: "Westlands, Nairobi, Kenya",
 		avgPrice: "From 14.5M KSH ($111,538)",
 		highlights: [

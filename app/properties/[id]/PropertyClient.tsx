@@ -15,7 +15,7 @@ import {
 	aria,
 	amet,
 	brooksideForestOne,
-	brooksideOne,
+	oakRise,
 } from "@/utils/listings";
 import { WALink } from "@/utils/data";
 
@@ -26,10 +26,10 @@ interface PropertyClientProps {
 const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 	const [property, setProperty] = useState<any>(null);
 	const [selectedImage, setSelectedImage] =
-		useState<StaticImageData | null>(null);
+		useState<StaticImageData | string | null>(null);
 	const [loading, setLoading] = useState(true);
 	const [galleryImages, setGalleryImages] = useState<
-		StaticImageData[]
+		(StaticImageData | string)[]
 	>([]);
 
 	useEffect(() => {
@@ -43,7 +43,7 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 			...aria,
 			...amet,
 			...brooksideForestOne,
-			...brooksideOne,
+			...oakRise,
 		];
 
 		const found = allProperties.find((item) => item.id === id);
@@ -51,11 +51,14 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 			setProperty(found);
 			if (found.photos && Array.isArray(found.photos)) {
 				const seen = new Set<string>();
-				const valid: StaticImageData[] = [];
+				const valid: (StaticImageData | string)[] = [];
+				const mainImgSrc = typeof found.mainImg === "string" ? found.mainImg : found.mainImg?.src;
+				
 				found.photos.forEach((img: any) => {
-					if (img && typeof img === "object" && img.src) {
-						if (!seen.has(img.src) && img.src !== found.mainImg?.src) {
-							seen.add(img.src);
+					if (img) {
+						const imgSrc = typeof img === "string" ? img : img.src;
+						if (imgSrc && !seen.has(imgSrc) && imgSrc !== mainImgSrc) {
+							seen.add(imgSrc);
 							valid.push(img);
 						}
 					}
@@ -66,7 +69,7 @@ const PropertyClient: React.FC<PropertyClientProps> = ({ id }) => {
 		setLoading(false);
 	}, [id]);
 
-	const openImageModal = (imageSrc: StaticImageData) =>
+	const openImageModal = (imageSrc: StaticImageData | string) =>
 		setSelectedImage(imageSrc);
 	const closeImageModal = () => setSelectedImage(null);
 

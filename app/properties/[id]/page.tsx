@@ -12,7 +12,7 @@ import {
 	aria,
 	amet,
 	brooksideForestOne,
-	brooksideOne,
+	oakRise,
 } from "@/utils/listings";
 
 // Type-safe helper function
@@ -51,7 +51,7 @@ export async function generateMetadata({
 		...aria,
 		...amet,
 		...brooksideForestOne,
-		...brooksideOne,
+		...oakRise,
 	];
 
 	const property = allProperties.find((item) => item.id === id);
@@ -139,7 +139,7 @@ export async function generateStaticParams() {
 		...aria,
 		...amet,
 		...brooksideForestOne,
-		...brooksideOne,
+		...oakRise,
 	];
 
 	return allProperties.map((property) => ({
@@ -164,7 +164,7 @@ export default async function PropertyPage({
 		...aria,
 		...amet,
 		...brooksideForestOne,
-		...brooksideOne,
+		...oakRise,
 	];
 
 	const property = allProperties.find((item) => item.id === id);

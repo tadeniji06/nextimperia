@@ -14,7 +14,7 @@ import {
 	amet,
 	aria,
 	brooksideForestOne,
-	brooksideOne,
+	oakRise,
 } from "@/utils/listings";
 
 const PropsNav = () => {
@@ -59,10 +59,10 @@ const PropsNav = () => {
 			color: "indigo",
 		},
 		b1: {
-			title: "Brookside Oak",
+			title: "Oak Rise",
 			description:
-				"Brookside Oak (Brookside One) offers premium living spaces with top-tier amenities in Westlands.",
-			listings: brooksideOne,
+				"Oak Rise offers premium living spaces with top-tier amenities in Westlands.",
+			listings: oakRise,
 			color: "cyan",
 		},
 		ame: {
@@ -88,7 +88,7 @@ const PropsNav = () => {
 			case "aria":
 				return "Aria Park";
 			case "b1":
-				return "Brookside Oak";
+				return "Oak Rise";
 			case "ame":
 				return "Amethyst";
 			default:
@@ -200,7 +200,7 @@ const PropsNav = () => {
 						}`}
 						style={{ WebkitTapHighlightColor: "transparent" }}
 					>
-						Brookside Oak
+						Oak Rise
 					</button>
 					<button
 						type='button'
