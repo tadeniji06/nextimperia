@@ -20,6 +20,10 @@ export const navLinks = [
 		link: "/the-launch",
 	},
 	{
+		name: "Reviews",
+		link: "/reviews",
+	},
+	{
 		name: "Contact Us",
 		link: "/contact",
 	},
@@ -118,5 +122,38 @@ export const slides = [
 		title: "Secure Your Future in Our Premium Estates",
 		body: "Prime locations, gated communities, and high return potential, everything your future deserves.",
 		accent: "Premium Estates",
+	},
+];
+
+export const reviewsData = [
+	{
+		text: "Investing in Kenyan real estate while living abroad felt daunting at first, having heard so many horror stories about deals gone wrong. But working with Mo and his team at Imperia changed that completely for me. From day one, they listened to what I actually wanted to achieve rather than pushing a quick sales solution. Their team provided clear, transparent updates at every stage and handled the process with complete integrity and professionalism. Knowing my investment was in reliable hands thousands of miles away gave me total peace of mind. I look forward to more project opportunities with them.",
+		author: "Mr Nwabueze",
+		role: "Diaspora investor, Nigeria",
+	},
+	{
+		text: "Imperia didn't just push listings at me, they actually listened to what I wanted to achieve. From Ruaka to Riverside to Westlands, every recommendation felt tailored, not generic. Their sharp local expertise and constant communication meant I always felt on top of things, even managing an investment from another continent.",
+		author: "Muye",
+		role: "London UK",
+	},
+	{
+		text: "Investing in property in Africa can feel daunting when you're miles away, but with Imperia, the experience was different. They listened, understood my goals, identified the right opportunities, and made the entire process simple and transparent. I always felt informed, supported and confident that my investment was in good hands. Imperia gave me the confidence to invest from afar.",
+		author: "Tunde",
+		role: "Diaspora Investor | Kent UK 🇬🇧",
+	},
+	{
+		text: "Living abroad, I needed a team I could completely trust to break down the Kenyan property market and help me figure out the financials of investing without second-guessing my numbers. Imperia didn't just help me crunch the data; they guided me smoothly through the legal process and handled all the moving parts—from tenant acquisition and rigorous vetting to ongoing property maintenance. Their local expertise and end-to-end support gave me total peace of mind investing remotely.",
+		author: "Ayoola F",
+		role: "Diaspora Investor | United Kingdom",
+	},
+	{
+		text: "Imperial team came to my rescue when i was looking to invest in Africa. They were so impactful in making the process seamless, from selecting the best property investment opportunity after carefully understanding my investment needs to their professionalism and great communication skills which forested a smooth purchase process which has led to multiple property investment in Kenya. I am very glad and happy for investing in Kenya through Imperial.",
+		author: "Abidemi",
+		role: "Toronto Canada",
+	},
+	{
+		text: "I am extremely grateful for the exceptional services I received from imperia consult Nairobi. They guided me throughout the entire process of purchasing my first flat, making what could have been a stressful experience smooth and straightforward. Am glad in investing through imperia consult Nairobi.",
+		author: "Dele",
+		role: "Pattaya Thailand",
 	},
 ];

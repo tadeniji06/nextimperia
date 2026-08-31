@@ -109,6 +109,12 @@ import orp3 from "./oakrise/plan3.jpeg";
 import orp4 from "./oakrise/plan4.jpeg";
 import orp5 from "./oakrise/plan5.jpeg";
 import orpx from "./oakrise/planx.jpeg";
+import orn1 from "./oakrise/n1.jpeg";
+import orn2 from "./oakrise/n2.jpeg";
+import orn3 from "./oakrise/n3.jpeg";
+import orn4 from "./oakrise/n4.jpeg";
+import orn5 from "./oakrise/n5.jpeg";
+import orn6 from "./oakrise/n6.jpeg";
 
 export {
 	logo,
@@ -211,4 +217,10 @@ export {
 	orp4,
 	orp5,
 	orpx,
+	orn1,
+	orn2,
+	orn3,
+	orn4,
+	orn5,
+	orn6,
 };
