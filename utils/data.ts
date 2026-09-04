@@ -156,4 +156,9 @@ export const reviewsData = [
 		author: "Dele",
 		role: "Pattaya Thailand",
 	},
+	{
+		text: "Imperia helped me clarify the business case for my property investment and successfully guided me through the maze of administrative requirements needed to seal the deal. Their steady hands and experience thoroughly put me at ease throughout the process.",
+		author: "Jean-Jacques",
+		role: "Bénin",
+	},
 ];

@@ -35,6 +35,12 @@ const Nav = () => {
 		return pathname.startsWith(linkPath);
 	};
 
+	const mainLinksNames = ["Home", "About Us", "Our Services", "Properties", "Contact Us"];
+	const mainLinks = navLinks.filter(link => mainLinksNames.includes(link.name));
+	const moreLinks = navLinks.filter(link => !mainLinksNames.includes(link.name));
+
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
 	return (
 		<header className='sticky top-0 z-50 bg-white shadow-md border-b border-gray-200'>
 			<div className='max-w-7xl mx-auto px-4'>
@@ -42,7 +48,7 @@ const Nav = () => {
 					{/* Logo */}
 					<Link
 						href='/'
-						className='flex items-center space-x-2 relative z-10'
+						className='flex items-center space-x-2 relative z-10 focus:outline-none'
 					>
 						<Image
 							src={logo}
@@ -54,27 +60,57 @@ const Nav = () => {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<ul className='hidden lg:flex space-x-8'>
-						{navLinks.map((link) => (
+					<ul className='hidden lg:flex space-x-6 items-center'>
+						{mainLinks.map((link) => (
 							<li key={link.name}>
 								<Link
 									href={link.link}
-									className={`text-lg font-semibold transition-colors duration-200 hover:text-red-600 ${
+									className={`text-base font-semibold transition-colors duration-200 hover:text-red-600 focus:outline-none ${
 										isActiveLink(link.link)
 											? "text-red-600 border-b-2 border-red-600 pb-1"
-											: "text-gray-400"
+											: "text-gray-600"
 									}`}
 								>
 									{link.name}
 								</Link>
 							</li>
 						))}
+						{/* Dropdown for More Links */}
+						<li 
+							className="relative py-2" 
+							onMouseEnter={() => setIsDropdownOpen(true)} 
+							onMouseLeave={() => setIsDropdownOpen(false)}
+						>
+							<button className={`flex items-center gap-1 text-base font-semibold transition-colors duration-200 hover:text-red-600 focus:outline-none ${
+								moreLinks.some(l => isActiveLink(l.link)) ? 'text-red-600' : 'text-gray-600'
+							}`}>
+								More
+								<Icon icon="mdi:chevron-down" className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+							</button>
+							
+							{isDropdownOpen && (
+								<div className="absolute top-full right-0 w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50">
+									{moreLinks.map((link) => (
+										<Link
+											key={link.name}
+											href={link.link}
+											onClick={() => setIsDropdownOpen(false)}
+											className={`block px-4 py-2.5 text-sm font-medium transition-colors hover:bg-red-50 hover:text-red-600 focus:outline-none ${
+												isActiveLink(link.link) ? 'text-red-600 bg-red-50' : 'text-gray-600'
+											}`}
+										>
+											{link.name}
+										</Link>
+									))}
+								</div>
+							)}
+						</li>
 					</ul>
 
 					{/* Desktop Get Started Button */}
 					<div className='hidden lg:block'>
-						<Link href={"/properties"}>
-							<button className='font-bold text-white bg-primary hover:bg-primary/90 px-5 py-3 rounded-xl transition-colors duration-200'>
+						<Link href={"/properties"} className="focus:outline-none">
+							<button className='font-bold text-white bg-primary hover:bg-primary/90 px-5 py-3 rounded-xl transition-colors duration-200 focus:outline-none'>
 								Get Started
 							</button>
 						</Link>
@@ -137,7 +173,7 @@ const Nav = () => {
 												<Link
 													href={link.link}
 													onClick={closeMobileMenu}
-													className={`block px-6 py-3 text-base font-medium transition-colors duration-200 ${
+													className={`block px-6 py-3 text-base font-medium transition-colors duration-200 focus:outline-none ${
 														isActiveLink(link.link)
 															? "text-red-600 bg-red-50 border-r-4 border-red-600"
 															: "text-gray-500 hover:text-red-600 hover:bg-gray-50"
@@ -155,8 +191,9 @@ const Nav = () => {
 									<Link
 										href={"/properties"}
 										onClick={closeMobileMenu}
+										className="focus:outline-none"
 									>
-										<button className='w-full font-bold text-white bg-primary hover:bg-primary/90 px-5 py-3 rounded-xl transition-colors duration-200'>
+										<button className='w-full font-bold text-white bg-primary hover:bg-primary/90 px-5 py-3 rounded-xl transition-colors duration-200 focus:outline-none'>
 											Get Started
 										</button>
 									</Link>
